@@ -17,6 +17,9 @@ export async function before(m, { conn, participants, groupMetadata }) {
   let chat = global.db.data.chats[m.chat];
 
   if (chat.welcome) {
+    // Imprime los parámetros del stub para ver qué datos recibes
+    console.log('messageStubParameters:', m.messageStubParameters);
+
     // Asegúrate de que m.messageStubParameters esté correctamente definido.
     if (m.messageStubParameters && m.messageStubParameters.length > 0) {
       let who = m.messageStubParameters[0]?.replace('@', '') + '@s.whatsapp.net';
