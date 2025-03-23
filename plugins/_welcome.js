@@ -1,12 +1,11 @@
-import { WAMessageStubType } from '@whiskeysockets/baileys'; // Para los tipos de mensajes
-import fetch from 'node-fetch'; // Si vas a usar fetch
-import fs from 'fs'; // Para leer archivos locales
-import path from 'path'; // Para manejar rutas de archivos
+import { WAMessageStubType } from '@whiskeysockets/baileys';
+import fetch from 'node-fetch';
+import fs from 'fs';
+import path from 'path'; 
 
 export async function before(m, { conn, participants, groupMetadata }) {
   if (!m.messageStubType || !m.isGroup) return !0;
 
-  // Ruta de la imagen local
   let img;
   try {
     img = fs.readFileSync(path.join(process.cwd(), 'src', 'welcome.jpg'));
