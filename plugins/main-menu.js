@@ -12,12 +12,12 @@ let handler = async (m, { conn, args }) => {
     let txt = `
 *!𝙷𝚘𝚕𝚊! 𝚎𝚜𝚝𝚎 𝚎𝚜 𝚎𝚕 𝚖𝚎𝚗𝚞 𝚍𝚎 ${botname}*
 ╭┈ ↷
-│✐ Cliente ➩ @${userId.split('@')[0]}
-│❀ Modo ➩ Publica
-│✦ Bot ➩ ${(conn.user.jid == global.conn.user.jid ? 'Principal 🅥' : 'Sub-bot 🆂')}
-│ⴵ Activa ➩ ${uptime}
-│✰ Usuarios ➩ ${totalreg}
-│❏ version ➩ 1.0.0
+> ✐ Cliente ➩ @${userId.split('@')[0]}
+> ❀ Modo ➩ Publica
+> ✦ Bot ➩ ${(conn.user.jid == global.conn.user.jid ? 'Principal 🅥' : 'Sub-bot 🆂')}
+> ⴵ Activa ➩ ${uptime}
+> ✰ Usuarios ➩ ${totalreg}
+> ❏ version ➩ 1.0.0
 ╰─────────────────
 
 • :･ﾟ⊹˚• \`『 Info-Bot 』\` •˚⊹:･ﾟ•
