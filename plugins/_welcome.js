@@ -1,14 +1,20 @@
 import fs from 'fs';
 import path from 'path';
 import { WAMessageStubType } from '@whiskeysockets/baileys';
-import fetch from 'node-fetch';
 
 export async function before(m, { conn, participants, groupMetadata }) {
   if (!m.messageStubType || !m.isGroup) return;
 
-  let img = fs.readFileSync(path.join(process.cwd(), 'src', 'welcome.jpg'));
-  let chat = global.db.data.chats[m.chat];
+  let img;
+  try {
+    img = fs.readFileSync(path.join(process.cwd(), 'src', 'welcome.jpg'));
+  } catch (error) {
+    console.error('No se pudo cargar la imagen:', error);
+    return;  // Salir si la imagen no se puede cargar
+  }
 
+  let chat = global.db.data.chats[m.chat];
+  
   if (chat.welcome) {
     let who = m.messageStubParameters[0]?.replace('@', '') + '@s.whatsapp.net';
 
