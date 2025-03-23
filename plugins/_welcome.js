@@ -5,22 +5,26 @@ import { WAMessageStubType } from '@whiskeysockets/baileys';
 export async function before(m, { conn, participants, groupMetadata }) {
   if (!m.messageStubType || !m.isGroup) return;
 
-  // Verifica si los parámetros de la imagen son correctos.
+  // Verifica si la imagen se puede cargar
   let img;
   try {
     img = fs.readFileSync(path.join(process.cwd(), 'src', 'welcome.jpg'));
   } catch (error) {
-    console.error('No se pudo cargar la imagen:', error);
+    console.error('No se pudo cargar la imagen desde la ruta especificada:', error);
     return;
   }
 
+  // Asegúrate de que `chat` y `chat.welcome` están definidos
   let chat = global.db.data.chats[m.chat];
+  if (!chat || !chat.welcome) {
+    console.error('No se pudo acceder a chat.welcome, asegúrate de que esté configurado correctamente.');
+    return;
+  }
 
   if (chat.welcome) {
-    // Imprime los parámetros del stub para ver qué datos recibes
     console.log('messageStubParameters:', m.messageStubParameters);
 
-    // Asegúrate de que m.messageStubParameters esté correctamente definido.
+    // Verifica si messageStubParameters tiene datos
     if (m.messageStubParameters && m.messageStubParameters.length > 0) {
       let who = m.messageStubParameters[0]?.replace('@', '') + '@s.whatsapp.net';
 
