@@ -43,6 +43,3 @@ handler.tags = ['tools'];
 handler.register = true;
 
 export default handler;
-
-
-Usa ése me lo dió Alex y si funciona
