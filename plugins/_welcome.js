@@ -4,7 +4,7 @@ import fetch from 'node-fetch';
 export async function before(m, { conn, participants, groupMetadata }) {
   if (!m.messageStubType || !m.isGroup) return;
 
-  let img = 'URL_O_VARIABLE_DE_IMAGEN'; // Asegúrate de definir la imagen correctamente
+  let img = fs.readFileSync(path.join(process.cwd(), 'src', 'welcome.jpg'));
   let chat = global.db.data.chats[m.chat];
 
   if (chat.welcome) {
