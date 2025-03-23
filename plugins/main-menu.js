@@ -509,7 +509,7 @@ let handler = async (m, { conn, args }) => {
           externalAdReply: {
               title: botname,
               body: textbot,
-              thumbnail.mini: catalogo,
+              thumbnailurl: catalogo,
               mediaType: 1,
               showAdAttribution: true,
               renderLargerThumbnail: true,
