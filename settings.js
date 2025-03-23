@@ -1,4 +1,3 @@
-import path from 'path'; 
 import { watchFile, unwatchFile } from 'fs' 
 import chalk from 'chalk'
 import { fileURLToPath } from 'url'
@@ -51,7 +50,7 @@ global.etiqueta = 'Legna'
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
 
 global.moneda = 'YamiCoins'
-global.banner = 'https://files.catbox.moe/9repde.jpg'
+global.banner = 'https://qu.ax/WVtoM.jpg'
 
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
 
