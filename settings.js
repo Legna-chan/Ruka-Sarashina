@@ -50,7 +50,7 @@ global.etiqueta = 'Legna'
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
 
 global.moneda = 'YamiCoins'
-global.menu = fs.readFileSync("./menu.jpg")
+global.banner = fs.readFileSync("./menu.jpg")
 global.avatar = 'https://tinyurl.com/25ru293g'
 
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
