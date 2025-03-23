@@ -149,8 +149,6 @@ global.db.data.chats[m.chat] = {}
 if (chat) {
 if (!('isBanned' in chat))
 chat.isBanned = false
-if (!('sAutoresponder' in chat))
-chat.sAutoresponder = ''
 if (!('welcome' in chat))
 chat.welcome = true
 if (!('autolevelup' in chat))
@@ -161,8 +159,6 @@ if (!('autosticker' in chat))
 chat.autosticker = false
 if (!('autoRechazar' in chat))
 chat.autoRechazar = false
-if (!('autoresponder' in chat))
-chat.autoresponder = false
 if (!('detect' in chat))
 chat.detect = true
 if (!('detect2' in chat))
@@ -201,7 +197,6 @@ isBanned: false,
 sAutoresponder: '',
 welcome: true,
 autolevelup: false,
-autoresponder: false,
 delete: false,
 autoAceptar: false,
 autoRechazar: false,
