@@ -8,12 +8,12 @@ let handler = async (m, { conn, args }) => {
     let uptime = clockString(_uptime);
     let totalreg = Object.keys(global.db.data.users).length;
     let totalCommands = Object.values(global.plugins).filter((v) => v.help && v.tags).length;
- 
+
     let txt = `
 *!𝙷𝚘𝚕𝚊! 𝚎𝚜𝚝𝚎 𝚎𝚜 𝚎𝚕 𝚖𝚎𝚗𝚞 𝚍𝚎 ${botname}*
 ╭──❀•°❀°•❀──╮  
 ┃ ✦ Cliente ➩ @${userId.split('@')[0]}  
-┃ ❀ Modo ➩ Publica  
+┃ ❀ Editor ➩ @Legna 
 ┃ ✦ Bot ➩ ${(conn.user.jid == global.conn.user.jid ? 'Principal 🅥' : 'Sub-bot 🆂')}  
 ┃ ⴵ Activa ➩ ${uptime}  
 ┃ ✰ Usuarios ➩ ${totalreg}  
@@ -207,11 +207,7 @@ let handler = async (m, { conn, args }) => {
 
 ☄︎ ᥴ᥆mᥲᥒძ᥆s ძᥱ ⍴ᥱr𝖿іᥣ ⍴ᥲrᥲ ᥎ᥱr, ᥴ᥆ᥒ𝖿іgᥙrᥲr ᥡ ᥴ᥆m⍴r᥆ᑲᥲr ᥱs𝗍ᥲძ᥆s ძᥱ 𝗍ᥙ ⍴ᥱr𝖿іᥣ. 
 
-ᰔᩚ *#reg • #verificar • #register*
-> ✦ Registra tu nombre y edad en el bot.
-ᰔᩚ *#unreg*
-> ✦ Elimina tu registro del bot.
-ᰔᩚ *#profile*
+ᰔᩚ *#profile • #perfil*
 > ✦ Muestra tu perfil de usuario.
 ᰔᩚ *#marry* [mension / etiquetar]
 > ✦ Propón matrimonio a otro usuario.
@@ -509,7 +505,7 @@ let handler = async (m, { conn, args }) => {
           externalAdReply: {
               title: botname,
               body: textbot,
-              thumbnail: catalogo,
+              thumbnailUrl: global.banner,
               mediaType: 1,
               showAdAttribution: true,
               renderLargerThumbnail: true,
