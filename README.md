@@ -1,9 +1,9 @@
-<h1 align="center">✿ Yami-chan ✿</h1>
+<h1 align="center">🌴
+ Yami-chan 🌴
+</h1>
 
- <img src= "https://qu.ax/rQmxs.jpg">
+ <img src= "https://qu.ax/FVCRF.jpg">
     </p>
-
->  https://chat.whatsapp.com/D8U3fQB1oLj3TzqwhRmzAD
 
 ### **`✰ Créditos ✰`**
 <a
