@@ -37,6 +37,5 @@ await conn.reply(m.chat, `${emoji} Hola Soy ${botname} Sigue El Canal y apoyanos
 handler.help = ['ds', 'fixmsgespera']
 handler.tags = ['info']
 handler.command = ['fixmsgespera', 'ds']
-handler.register = true
 
 export default handler
