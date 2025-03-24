@@ -13,7 +13,7 @@ let handler = async (m, { conn, args }) => {
 *!𝙷𝚘𝚕𝚊! 𝚎𝚜𝚝𝚎 𝚎𝚜 𝚎𝚕 𝚖𝚎𝚗𝚞 𝚍𝚎 ${botname}*
 ╭──❀•°❀°•❀──╮  
 ┃ ✦ Cliente ➩ @${userId.split('@')[0]}  
-┃ ❀ Desarrollador ➩ @Legna 
+┃ ❀ Editor ➩ @Legna 
 ┃ ✦ Bot ➩ ${(conn.user.jid == global.conn.user.jid ? 'Principal 🅥' : 'Sub-bot 🆂')}  
 ┃ ⴵ Activa ➩ ${uptime}  
 ┃ ✰ Usuarios ➩ ${totalreg}  
