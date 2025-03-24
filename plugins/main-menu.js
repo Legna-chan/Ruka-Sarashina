@@ -207,11 +207,7 @@ let handler = async (m, { conn, args }) => {
 
 ☄︎ ᥴ᥆mᥲᥒძ᥆s ძᥱ ⍴ᥱr𝖿іᥣ ⍴ᥲrᥲ ᥎ᥱr, ᥴ᥆ᥒ𝖿іgᥙrᥲr ᥡ ᥴ᥆m⍴r᥆ᑲᥲr ᥱs𝗍ᥲძ᥆s ძᥱ 𝗍ᥙ ⍴ᥱr𝖿іᥣ. 
 
-ᰔᩚ *#reg • #verificar • #register*
-> ✦ Registra tu nombre y edad en el bot.
-ᰔᩚ *#unreg*
-> ✦ Elimina tu registro del bot.
-ᰔᩚ *#profile*
+ᰔᩚ *#profile • #perfil*
 > ✦ Muestra tu perfil de usuario.
 ᰔᩚ *#marry* [mension / etiquetar]
 > ✦ Propón matrimonio a otro usuario.
