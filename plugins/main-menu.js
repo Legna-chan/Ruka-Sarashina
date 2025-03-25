@@ -24,34 +24,34 @@ let handler = async (m, { conn, args }) => {
 
 ☄︎ ᥴ᥆mᥲᥒძ᥆s ⍴ᥲrᥲ ᥎ᥱr ᥱs𝗍ᥲძ᥆ ᥱ іᥒ𝖿᥆rmᥲᥴі᥆́ᥒ ძᥱ ᥣᥲ ᑲ᥆𝗍. 
 
-ᰔᩚ *#help • #menu*
-> ✦ Ver la lista de comandos de la Bot.
-ᰔᩚ *#uptime • #runtime*
-> ✦ Ver tiempo activo o en linea de la Bot.
-ᰔᩚ *#serbot • #serbot code*
-> ✦ Crea una sesión de Sub-Bot.
-ᰔᩚ *#bots • #sockets*
-> ✦ Ver la lista de Sub-Bots activos.
-ᰔᩚ *#status • #estado*
-> ✦ Ver el estado actual de la Bot.
-ᰔᩚ *#links • #grupos*
-> ✦ Ver los enlaces oficiales de la Bot.
-ᰔᩚ *#infobot • #infobot*
-> ✦ Ver la información completa de la Bot.
-ᰔᩚ *#p • #ping*
-> ✦ Ver la velocidad de respuesta del Bot.
-ᰔᩚ *#reporte • #reportar*
-> ✦ Reporta alguna falla o problema de la Bot.
-ᰔᩚ *#sistema • #system*
-> ✦ Ver estado del sistema de alojamiento.
-ᰔᩚ *#speed • #speedtest*
-> ✦ Ver las estadísticas de velocidad de la Bot.
-ᰔᩚ *#views • #usuarios*
-> ✦ Ver la cantidad de usuarios registrados en el sistema.
-ᰔᩚ *#ds • #fixmsgespera*
-> ✦ Eliminar archivos de sesión innecesarios.
-ᰔᩚ *#editautoresponder*
-> ✦ Configurar un Prompt personalizado de la Bot.
+✤ *#help • #menu*
+> ➮ Ver la lista de comandos de la Bot.
+✤ *#uptime • #runtime*
+> ➮ Ver tiempo activo o en linea de la bot. 
+✤ *#qr • #code*
+> ➮ Crea una sesión de SSub-Bot
+✤ *#bots • #sockets*
+> ➮ Ver la lista de Sub-Bots activos.
+✤ *#status • #estado*
+> ➮ Ver el estado actual de la Bot.
+✤ *#links • #grupos*
+> ➮ Ver los enlaces oficiales de la Bot.
+✤ *#infobot • #infobot*
+> ➮ Ver la información completa de la Bot.
+✤ *#p • #ping*
+> ➮ Ver la velocidad de respuesta del Bot.
+✤ *#reporte • #reportar*
+> ➮ Reporta alguna falla o problema de la Bot.
+✤ *#sistema • #system*
+> ➮ Ver estado del sistema de alojamiento.
+✤ *#speed • #speedtest*
+> ➮ Ver las estadísticas de velocidad de la Bot.
+✤ *#views • #usuarios*
+> ➮ Ver la cantidad de usuarios registrados en el sistema.
+✤ *#ds • #fixmsgespera*
+> ➮ Eliminar archivos de sesión innecesarios.
+✤ *#editautoresponder*
+> ➮ Configurar un Prompt personalizado de la Bot.
 
 • :･ﾟ⊹˚• \`『 Buscadores 』\` •˚⊹:･ﾟ•
 
