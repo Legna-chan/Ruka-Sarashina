@@ -1,13 +1,10 @@
 const handler = async (m, { conn, participants, groupMetadata }) => {
   const { welcome, autolevelup, antiBot, antiBot2, autoAceptar, autoRechazar, autoresponder, modoadmin, reaction, nsfw, detect, antiLink, antiLink2, antitoxic, antiTraba, antifake } = global.db.data.chats[m.chat];
   
-  const text = `🌷 *CONFIGURACIÓN DEL GRUPO* 
+  const text = `🌷 *CONFIGURACIÓN DEL GRUPO* 🌷 
   
 ◈ Welcome: \`${welcome ? 'Activado' : 'Desactivado'}\`
 > ➨ *Descripción:* Activa o desactiva el mensaje de bienvenida en el grupo.
-
-◈ Autolevelup: \`${autolevelup ? 'Activado' : 'Desactivado'}\`
-> ➨ *Descripción:* Activa o descativa la subida automática de nivel en el Bot.
 
 ◈ Antibot: \`${antiBot ? 'Activado' : 'Desactivado'}\`
 > ➨ *Descripción:* Activa o descativa la expulsión de un grupo. otros bots no autorizados.
