@@ -276,10 +276,10 @@ let handler = async (m, { conn, args }) => {
 > ✦ Quitar advertencias.
 ᰔᩚ *#advlist • #listadv*
 > ✦ Ver lista de usuarios advertidos.
-ᰔᩚ *#banchat*
-> ✦ Banear el Bot en un chat o grupo.
-ᰔᩚ *#unbanchat*
-> ✦ Desbanear el Bot del chat o grupo.
+ᰔᩚ *#bot on*
+> ✦ activa el bot en un grupo.
+ᰔᩚ *#bot off*
+> ✦ Desactiva el bot en un grupo.
 ᰔᩚ *#mute* [mension / etiquetar]
 > ✦ El bot elimina los mensajes del usuario.
 ᰔᩚ *#unmute* [mension / etiquetar]
