@@ -20,7 +20,7 @@ let handler = async (m, { conn, args }) => {
 ┃ ❏ Versión ➩ 1.0.0  
 ╰──❀•°❀°•❀──╯
 
-🌸  •/• \`Info-Bot\` •/•
+🍃  •/• \`Info-Bot\` •/•
 
 ☄︎ ᥴ᥆mᥲᥒძ᥆s ⍴ᥲrᥲ ᥎ᥱr ᥱs𝗍ᥲძ᥆ ᥱ іᥒ𝖿᥆rmᥲᥴі᥆́ᥒ ძᥱ ᥣᥲ ᑲ᥆𝗍. 
 
@@ -53,7 +53,7 @@ let handler = async (m, { conn, args }) => {
 ✤ *#editautoresponder*
 > ➮ Configurar un Prompt personalizado de la Bot.
 
-🌸  •/• \`Buscadores\` •/•
+🍃  •/• \`Buscadores\` •/•
 
 ☄︎ ᥴ᥆mᥲᥒძ᥆s ⍴ᥲrᥲ rᥱᥲᥣіzᥲr ᑲᥙ́s𝗊ᥙᥱძᥲs ᥱᥒ ძіs𝗍іᥒ𝗍ᥲs ⍴ᥣᥲ𝗍ᥲ𝖿᥆rmᥲs. 
 
@@ -88,7 +88,7 @@ let handler = async (m, { conn, args }) => {
 ᰔᩚ *#npmjs*
 > ✦ Buscandor de npmjs.
 
-🌸  •/• \`Descargas\` •/•
+🍃  •/• \`Descargas\` •/•
 
 ☄︎ ᥴ᥆mᥲᥒძ᥆s ძᥱ ძᥱsᥴᥲrgᥲs ⍴ᥲrᥲ ᥎ᥲrі᥆s ᥲrᥴһі᥎᥆s. 
 .
@@ -125,7 +125,7 @@ let handler = async (m, { conn, args }) => {
 ᰔᩚ *#animelinks • #animedl*
 > ✦ Descarga Links disponibles de descargas.
 
-🌸  •/• \`Economia\` •/•
+🍃  •/• \`Economia\` •/•
 
 ☄︎ ᥴ᥆mᥲᥒძ᥆s ძᥱ ᥱᥴ᥆ᥒ᥆mі́ᥲ ᥡ r⍴g ⍴ᥲrᥲ gᥲᥒᥲr ძіᥒᥱr᥆ ᥡ ᥆𝗍r᥆s rᥱᥴᥙrs᥆s. 
 
@@ -182,7 +182,7 @@ let handler = async (m, { conn, args }) => {
 ᰔᩚ *#mazmorra • #explorar*
 > ✦ Explorar mazmorras para ganar ${moneda}.
 
-🌸  •/• \`Stickers\` •/•
+🍃  •/• \`Stickers\` •/•
 
 ☄︎ ᥴ᥆mᥲᥒძ᥆s ⍴ᥲrᥲ ᥴrᥱᥲᥴі᥆ᥒᥱs ძᥱ s𝗍іᥴkᥱrs ᥱ𝗍ᥴ. 
 
@@ -203,7 +203,7 @@ let handler = async (m, { conn, args }) => {
 ᰔᩚ *#emojimix*
 > ✦ Fuciona 2 emojis para crear un sticker.
 
-🌸  •/• \`Perfil\` •/•
+🍃  •/• \`Perfil\` •/•
 
 ☄︎ ᥴ᥆mᥲᥒძ᥆s ძᥱ ⍴ᥱr𝖿іᥣ ⍴ᥲrᥲ ᥎ᥱr, ᥴ᥆ᥒ𝖿іgᥙrᥲr ᥡ ᥴ᥆m⍴r᥆ᑲᥲr ᥱs𝗍ᥲძ᥆s ძᥱ 𝗍ᥙ ⍴ᥱr𝖿іᥣ. 
 
@@ -234,7 +234,7 @@ let handler = async (m, { conn, args }) => {
 ᰔᩚ *#confesiones • #confesar*
 > ✦ Confiesa tus sentimientos a alguien de manera anonima.
 
-🌸  •/• \`Grupos\` •/•
+🍃  •/• \`Grupos\` •/•
 
 ☄︎ ᥴ᥆mᥲᥒძ᥆s ძᥱ grᥙ⍴᥆s ⍴ᥲrᥲ ᥙᥒᥲ mᥱȷ᥆r gᥱs𝗍і᥆́ᥒ ძᥱ ᥱᥣᥣ᥆s. 
 
@@ -299,7 +299,7 @@ let handler = async (m, { conn, args }) => {
 ᰔᩚ *#listnum • #kicknum*
 > ✦ Elimine a usuario por el prefijo de país.
 
-🌸  •/• \`Anime\` •/•
+🍃  •/• \`Anime\` •/•
 
 ☄︎ ᥴ᥆mᥲᥒძ᥆s ძᥱ rᥱᥲᥴᥴі᥆́ᥒ ᥲᥒіmᥱ. 
 
@@ -372,7 +372,7 @@ let handler = async (m, { conn, args }) => {
 ᰔᩚ *#think* + <mencion>
 > ✦ Pensar en algo
 
-🌸  •/• \`Nsfw\` •/•
+🍃  •/• \`Nsfw\` •/•
 
 ☄︎ ᥴ᥆mᥲᥒძ᥆s ᥒs𝖿ᥕ (⍴ᥲrᥲ ᥲძᥙᥣ𝗍᥆s). 
 
@@ -419,7 +419,7 @@ let handler = async (m, { conn, args }) => {
 ᰔᩚ *#yuri • #tijeras* + <mencion>
 > ✦ Hacer tijeras.
 
-🌸  •/• \`Juegos\` •/•
+🍃  •/• \`Juegos\` •/•
 
 ☄︎ ᥴ᥆mᥲᥒძ᥆s ძᥱ ȷᥙᥱg᥆s ⍴ᥲrᥲ ȷᥙgᥲr ᥡ ძі᥎ᥱr𝗍іr𝗍ᥱ ᥴ᥆ᥒ 𝗍ᥙs ᥲmіg᥆s. 
 
