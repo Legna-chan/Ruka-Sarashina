@@ -31,28 +31,35 @@ let handler = async (_0x10bd40, {
     return _0x14a396;
   }
 
-  // Realizamos la consulta a la API de Pinterest
-  let { data } = await _0x36ae01.get(`https://api.agungny.my.id/api/pinterest-download?url=https://www.pinterest.com/search/pins/?q=${encodeURIComponent(_0x27db11)}`);
-  
-  // Verificamos que la API haya retornado datos correctamente
-  if (!data || !data[0]) {
-    return _0x9c7141.reply(_0x10bd40.chat, `No se encontraron resultados para la búsqueda: ${_0x27db11}`, _0x10bd40);
+  // Formateamos la URL de búsqueda
+  const searchUrl = `https://www.pinterest.com/search/pins/?q=${encodeURIComponent(_0x27db11)}`;
+
+  try {
+    let { data } = await _0x36ae01.get(`https://api.agungny.my.id/api/pinterest-download?url=${encodeURIComponent(searchUrl)}`);
+
+    // Verificamos si hay resultados
+    if (!data || !data[0] || !data[0].url) {
+      return _0x9c7141.reply(_0x10bd40.chat, `No se encontraron resultados para la búsqueda: ${_0x27db11}`, _0x10bd40);
+    }
+
+    // Obtenemos la URL de la primera imagen
+    const imageUrl = data[0].url;
+
+    // Enviamos la imagen al chat
+    const _0x1ca5c6 = generateWAMessageFromContent(_0x10bd40.chat, {
+      'imageMessage': await _0x3f3fc7(imageUrl)
+    }, {
+      'quoted': _0x10bd40
+    });
+
+    await _0x10bd40.react('✅');
+    await _0x9c7141.relayMessage(_0x10bd40.chat, _0x1ca5c6.message, {
+      'messageId': _0x1ca5c6.key.id
+    });
+  } catch (error) {
+    console.error('Error al obtener la imagen:', error);
+    _0x9c7141.reply(_0x10bd40.chat, 'Hubo un error al intentar obtener la imagen. Intenta nuevamente más tarde.', _0x10bd40);
   }
-
-  // Obtenemos la URL de la primera imagen
-  const imageUrl = data[0].url;
-
-  // Enviamos la imagen al chat
-  const _0x1ca5c6 = generateWAMessageFromContent(_0x10bd40.chat, {
-    'imageMessage': await _0x3f3fc7(imageUrl)
-  }, {
-    'quoted': _0x10bd40
-  });
-
-  await _0x10bd40.react('✅');
-  await _0x9c7141.relayMessage(_0x10bd40.chat, _0x1ca5c6.message, {
-    'messageId': _0x1ca5c6.key.id
-  });
 };
 
 handler.help = ["pinterest"];
