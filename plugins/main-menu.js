@@ -29,7 +29,7 @@ let handler = async (m, { conn, args }) => {
 ✤ *#uptime • #runtime*
 > ➮ Ver tiempo activo o en linea de la bot. 
 ✤ *#qr • #code*
-> ➮ Crea una sesión de SSub-Bot
+> ➮ Crea una sesión de Sub-Bot
 ✤ *#bots • #sockets*
 > ➮ Ver la lista de Sub-Bots activos.
 ✤ *#status • #estado*
