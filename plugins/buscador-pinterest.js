@@ -12,11 +12,11 @@ let handler = async (_0x10bd40, {
   command: _0x5ad406
 }) => {
   if (!_0x27db11) {
-    return _0x9c7141.reply(_0x10bd40.chat, `${emoji} Por favor, ingresa lo que deseas buscar en Pinterest.`, _0x10bd40);
+    return _0x9c7141.reply(_0x10bd40.chat, `Por favor, ingresa lo que deseas buscar en Pinterest.`, _0x10bd40);
   }
 
-  await _0x10bd40.react(rwait);
-  _0x9c7141.reply(_0x10bd40.chat, `${emoji2} Buscando imágenes... Espere un momento...`, _0x10bd40);
+  await _0x10bd40.react('⌛');
+  _0x9c7141.reply(_0x10bd40.chat, `Buscando imágenes... Espere un momento...`, _0x10bd40);
 
   async function _0x3f3fc7(_0x5f4723) {
     const {
@@ -31,24 +31,25 @@ let handler = async (_0x10bd40, {
     return _0x14a396;
   }
 
-  let {
-    data: _0x4fc489
-  } = await _0x36ae01.get(`https://api.agungny.my.id/api/pinterest-download?url=https://www.pinterest.com/search/pins/?q=${encodeURIComponent(_0x27db11)}`);
+  // Realizamos la consulta a la API de Pinterest
+  let { data } = await _0x36ae01.get(`https://api.agungny.my.id/api/pinterest-download?url=https://www.pinterest.com/search/pins/?q=${encodeURIComponent(_0x27db11)}`);
   
-  // Extraemos las URLs de las imágenes de la respuesta
-  let _0x5f34cb = _0x4fc489.data.map(_0x33ba1c => _0x33ba1c.url);
+  // Verificamos que la API haya retornado datos correctamente
+  if (!data || !data[0]) {
+    return _0x9c7141.reply(_0x10bd40.chat, `No se encontraron resultados para la búsqueda: ${_0x27db11}`, _0x10bd40);
+  }
 
-  // Seleccionamos solo la primera imagen
-  let _0x47c48a = _0x5f34cb[0];
+  // Obtenemos la URL de la primera imagen
+  const imageUrl = data[0].url;
 
   // Enviamos la imagen al chat
   const _0x1ca5c6 = generateWAMessageFromContent(_0x10bd40.chat, {
-    'imageMessage': await _0x3f3fc7(_0x47c48a)
+    'imageMessage': await _0x3f3fc7(imageUrl)
   }, {
     'quoted': _0x10bd40
   });
 
-  await _0x10bd40.react(done);
+  await _0x10bd40.react('✅');
   await _0x9c7141.relayMessage(_0x10bd40.chat, _0x1ca5c6.message, {
     'messageId': _0x1ca5c6.key.id
   });
