@@ -49,7 +49,6 @@ let handler = async (m, { conn }) => {
 handler.help = ['levelup', 'lvl @user']
 handler.tags = ['rpg']
 handler.command = ['nivel', 'lvl', 'level', 'levelup']
-handler.register = true
 handler.group = true
 
 export default handler
