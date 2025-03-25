@@ -148,21 +148,6 @@ Un administrador puede activar o desactivar el *${command}* utilizando:\n\n> ✐
       global.opts['autoread'] = isEnable;
       break;
 
-    case 'antiver':
-    case 'antiocultar':
-    case 'antiviewonce':
-      if (!m.isGroup) {
-        if (!isOwner) {
-          global.dfail('group', m, conn);
-          throw false;
-        }
-      } else if (!isAdmin) {
-        global.dfail('admin', m, conn);
-        throw false;
-      }
-      chat.antiver = isEnable;
-      break;
-
     case 'reaction':
     case 'reaccion':
     case 'emojis':
@@ -273,28 +258,6 @@ Un administrador puede activar o desactivar el *${command}* utilizando:\n\n> ✐
         }
       }
       chat.antiLink2 = isEnable;
-      break;
-        
-    case 'antitoxic': 
-    case 'antitoxicos':
-      if (m.isGroup) {
-        if (!(isAdmin || isOwner)) {
-          global.dfail('admin', m, conn);
-          throw false;
-        }
-      }
-      chat.antitoxic = isEnable;
-      break;
-      
-      case 'antitrabas': 
-      case 'antitraba':
-      if (m.isGroup) {
-        if (!(isAdmin || isOwner)) {
-          global.dfail('admin', m, conn);
-          throw false;
-        }
-      }
-       chat.antiTraba = isEnable;
       break;
       
       case 'antifake': 
