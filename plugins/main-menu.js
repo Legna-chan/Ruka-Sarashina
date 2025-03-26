@@ -67,8 +67,6 @@ let handler = async (m, { conn, args }) => {
 > ➮ Buscador de usuarios de GitHub.
 ✤ *#google*
 > ➮ Realiza búsquedas por Google.
-✤ *#pin • #pinterest*
-> ➮ Buscador de imagenes de Pinterest.
 ✤ *#imagen • #image*
 > ➮ buscador de imagenes de Google.
 ✤ *#animesearch • #animess*
@@ -93,9 +91,7 @@ let handler = async (m, { conn, args }) => {
 ☄︎ ᥴ᥆mᥲᥒძ᥆s ძᥱ ძᥱsᥴᥲrgᥲs ⍴ᥲrᥲ ᥎ᥲrі᥆s ᥲrᥴһі᥎᥆s. 
 .
 ✤ *#tiktok • #tt*
-> ➮ Descarga videos de TikTok.
-✤ *#pinvid • #pinvideo* + [enlacé]
-> ➮ Descargar vídeos de Pinterest. 
+> ➮ Descarga videos de TikTok. 
 ✤ *#play • #play2*
 > ➮ Descarga música/video de YouTube.
 ✤ *#ytmp3 • #ytmp4*
