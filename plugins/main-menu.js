@@ -57,73 +57,69 @@ let handler = async (m, { conn, args }) => {
 
 ☄︎ ᥴ᥆mᥲᥒძ᥆s ⍴ᥲrᥲ rᥱᥲᥣіzᥲr ᑲᥙ́s𝗊ᥙᥱძᥲs ᥱᥒ ძіs𝗍іᥒ𝗍ᥲs ⍴ᥣᥲ𝗍ᥲ𝖿᥆rmᥲs. 
 
-ᰔᩚ *#tiktoksearch • #tiktoks*
-> ✦ Buscador de videos de tiktok.
-ᰔᩚ *#tweetposts*
-> ✦ Buscador de posts de Twitter/X.
-ᰔᩚ *#ytsearch • #yts*
-> ✦ Realiza búsquedas de Youtube.
-ᰔᩚ *#githubsearch*
-> ✦ Buscador de usuarios de GitHub.
-ᰔᩚ *#google*
-> ✦ Realiza búsquedas por Google.
-ᰔᩚ *#pin • #pinterest*
-> ✦ Buscador de imagenes de Pinterest.
-ᰔᩚ *#imagen • #image*
-> ✦ buscador de imagenes de Google.
-ᰔᩚ *#animesearch • #animess*
-> ✦ Buscador de animes de tioanime.
-ᰔᩚ *#animei • #animeinfo*
-> ✦ Buscador de capítulos de #animesearch.
-ᰔᩚ *#infoanime*
-> ✦ Buscador de información de anime/manga.
-ᰔᩚ *#hentaisearch • #searchhentai*
-> ✦ Buscador de capítulos hentai.
-ᰔᩚ #xnxxsearch • #xnxxs*
-> ✦ Buscador de vídeos de Xnxx.
-ᰔᩚ *#xvsearch • #xvideossearch*
-> ✦ Buscador de vídeos de Xvideos.
-ᰔᩚ *#pornhubsearch • #phsearch*
-> ✦ Buscador de videos de Pornhub.
-ᰔᩚ *#npmjs*
-> ✦ Buscandor de npmjs.
+✤ *#tiktoksearch • #tiktoks*
+> ➮ Buscador de videos de tiktok.
+✤ *#tweetposts*
+> ➮ Buscador de posts de Twitter/X.
+✤ *#ytsearch • #yts*
+> ➮ Realiza búsquedas de Youtube.
+✤ *#githubsearch*
+> ➮ Buscador de usuarios de GitHub.
+✤ *#google*
+> ➮ Realiza búsquedas por Google.
+✤ *#pin • #pinterest*
+> ➮ Buscador de imagenes de Pinterest.
+✤ *#imagen • #image*
+> ➮ buscador de imagenes de Google.
+✤ *#animesearch • #animess*
+> ➮ Buscador de animes de tioanime.
+✤ *#animei • #animeinfo*
+> ➮ Buscador de capítulos de #animesearch.
+✤ *#infoanime*
+> ➮ Buscador de información de anime/manga.
+✤ *#hentaisearch • #searchhentai*
+> ➮ Buscador de capítulos hentai.
+✤ #xnxxsearch • #xnxxs*
+> ➮ Buscador de vídeos de Xnxx.
+✤ *#xvsearch • #xvideossearch*
+> ➮ Buscador de vídeos de Xvideos.
+✤ *#pornhubsearch • #phsearch*
+> ➮ Buscador de videos de Pornhub.
+✤ *#npmjs*
+> ➮ Buscandor de npmjs.
 
 🍃  •/• \`Descargas\` •/•
 
 ☄︎ ᥴ᥆mᥲᥒძ᥆s ძᥱ ძᥱsᥴᥲrgᥲs ⍴ᥲrᥲ ᥎ᥲrі᥆s ᥲrᥴһі᥎᥆s. 
 .
-ᰔᩚ *#tiktok • #tt*
-> ✦ Descarga videos de TikTok.
-ᰔᩚ *#mediafire • #mf*
-> ✦ Descargar un archivo de MediaFire.
-ᰔᩚ *#pinvid • #pinvideo* + [enlacé]
-> ✦ Descargar vídeos de Pinterest. 
-ᰔᩚ *#mega • #mg* + [enlacé]
-> ✦ Descargar un archivo de MEGA.
-ᰔᩚ *#play • #play2*
-> ✦ Descarga música/video de YouTube.
-ᰔᩚ *#ytmp3 • #ytmp4*
-> ✦ Descarga música/video de YouTube mediante url.
-ᰔᩚ *#fb • #facebook*
-> ✦ Descarga videos de Facebook.
-ᰔᩚ *#twitter • #x* + [Link]
-> ✦ Descargar un video de Twitter/X
-ᰔᩚ *#ig • #instagram*
-> ✦ Descarga contenido de Instagram.
-ᰔᩚ *#tts • #tiktoks* + [busqueda]
-> ✦ Buscar videos de tiktok 
-ᰔᩚ *#gitclone* + <url> 
-> ✦ Descarga un repositorio de github.
-ᰔᩚ *#xvideosdl*
-> ✦ Descarga videos porno de (Xvideos). 
-ᰔᩚ *#xnxxdl*
-> ✦ Descarga videos porno de (xnxx).
-ᰔᩚ *#tiktokrandom • #ttrandom*
-> ✦ Descarga un video aleatorio de tiktok.
-ᰔᩚ *#npmdl • #npmdownloader*
-> ✦ Descarga paquetes de NPMJs.
-ᰔᩚ *#animelinks • #animedl*
-> ✦ Descarga Links disponibles de descargas.
+✤ *#tiktok • #tt*
+> ➮ Descarga videos de TikTok.
+✤ *#pinvid • #pinvideo* + [enlacé]
+> ➮ Descargar vídeos de Pinterest. 
+✤ *#play • #play2*
+> ➮ Descarga música/video de YouTube.
+✤ *#ytmp3 • #ytmp4*
+> ➮ Descarga música/video de YouTube mediante url.
+✤ *#fb • #facebook*
+> ➮ Descarga videos de Facebook.
+✤ *#twitter • #x* + [Link]
+> ➮ Descargar un video de Twitter/X
+✤ *#ig • #instagram*
+> ➮ Descarga contenido de Instagram.
+✤ *#tts • #tiktoks* + [busqueda]
+> ➮ Buscar videos de tiktok 
+✤ *#gitclone* + <url> 
+> ➮ Descarga un repositorio de github.
+✤ *#xvideosdl*
+> ➮ Descarga videos porno de (Xvideos). 
+✤ *#xnxxdl*
+> ➮ Descarga videos porno de (xnxx).
+✤ *#tiktokrandom • #ttrandom*
+> ➮ Descarga un video aleatorio de tiktok.
+✤ *#npmdl • #npmdownloader*
+> ➮ Descarga paquetes de NPMJs.
+✤ *#animelinks • #animedl*
+> ➮ Descarga Links disponibles de descargas.
 
 🍃  •/• \`Economia\` •/•
 
