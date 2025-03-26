@@ -55,7 +55,7 @@ export async function before(m, { conn, participants, groupMetadata }) {
   if (chat.welcome) {
     if (m.messageStubType === WAMessageStubType.GROUP_PARTICIPANT_ADD) {
       let bienvenida = `┏━━━━━━━━━━━━━━━━┅┈
-┃      🄱🄸🄴🄽🅅🄴🄽🄸🄳🄾
+┃   ｂｉｅｎｖｅｎｉｄ@
 ┣━━━━━━━━━━━━━━━━┅┈
 ┃ usuarios: ${taguser}
 ┃
@@ -67,7 +67,7 @@ export async function before(m, { conn, participants, groupMetadata }) {
 ┃
 ┗━━━━━━━━━━━━━━━━┅┈
 
-> Frase de bienvenida 
+> Frase de bienvenida 🌸
 ${fraseRandomBienvenida}` 
       await conn.sendMessage(m.chat, { video: { url: videoUrl }, gifPlayback: true, caption: bienvenida, mentions: [who] })
     }
@@ -75,7 +75,7 @@ ${fraseRandomBienvenida}`
     if (m.messageStubType === WAMessageStubType.GROUP_PARTICIPANT_LEAVE ||
         m.messageStubType === WAMessageStubType.GROUP_PARTICIPANT_REMOVE) {
       let despedida = `┏━━━━━━━━━━━━━━━━┅┈
-┃       🄱.    🄰.    🅈.
+┃   ｈａｓｔａ ｐｒｏｎｔｏ 
 ┣━━━━━━━━━━━━━━━━┅┈
 ┃ ᥙsᥙᥲrі᥆: ${taguser}
 ┃
@@ -86,7 +86,7 @@ ${fraseRandomBienvenida}`
 ┃ 𝖿ᥱᥴһᥲ: ${date}
 ┃
 ┗━━━━━━━━━━━━━━━━┅┈
-> Frase de despedida
+> Frase de despedida 🌸
 ${fraseRandomDespedida}` 
       await conn.sendMessage(m.chat, { video: { url: videoUrl }, gifPlayback: true, caption: despedida, mentions: [who] })
     }
