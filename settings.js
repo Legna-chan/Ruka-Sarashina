@@ -50,7 +50,7 @@ global.etiqueta = 'Legna'
 //*─────────────────────────────────────────────────────────────────────────────*
 
 global.moneda = 'YamiCoins'
-global.banner = 'https://qu.ax/hiMfm.jpg'
+global.banner = 'https://qu.ax/nYpbV.jpg'
 
 //*─────────────────────────────────────────────────────────────────────────────*
 
