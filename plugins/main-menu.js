@@ -173,6 +173,8 @@ let handler = async (m, { conn, args }) => {
 > ✦ Ver tu inventario con todos tus ítems.
 ᰔᩚ *#mazmorra • #explorar*
 > ✦ Explorar mazmorras para ganar ${moneda}.
+✤ *#pescar • #fishing*
+> ➮ gana ${moneda} pescando.
 
 🍃  •/• \`Stickers\` •/•
 
