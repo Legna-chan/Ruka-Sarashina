@@ -19,12 +19,12 @@ let handler = async (m, { conn }) => {
     while (canLevelUp(user.level, user.exp, global.multiplier)) user.level++;
 
     if (before !== user.level) {
-        let txt = `ᥫ᭡ Felicidades Has subido de nivel ❀\n\n`; 
+        let txt = `🍨 Felicidades Has subido de nivel 🍨\n\n`; 
         txt += `*${before}* ➔ *${user.level}* [ ${user.role} ]\n\n`;
         txt += `• ✰ *Nivel anterior* : ${before}\n`;
         txt += `• ✦ *Nuevos niveles* : ${user.level}\n`;
         txt += `• ❖ *Fecha* : ${new Date().toLocaleString('id-ID')}\n\n`;
-        txt += `> ➨ Nota: *Cuanto más interactúes con el Bot, mayor será tu nivel.*`;
+        txt += `> ➨ Nota: *Cuanto más interactúes con la Bot, mayor será tu nivel.*`;
         await conn.sendMessage(m.chat, { text: txt }, { quoted: m });
     } else {
         let users = Object.entries(global.db.data.users).map(([key, value]) => {
@@ -49,7 +49,6 @@ let handler = async (m, { conn }) => {
 handler.help = ['levelup', 'lvl @user']
 handler.tags = ['rpg']
 handler.command = ['nivel', 'lvl', 'level', 'levelup']
-handler.register = true
 handler.group = true
 
 export default handler

@@ -13,7 +13,6 @@ handler.command = ['piropo']
 handler.fail = null
 handler.exp = 0
 handler.group = true;
-handler.register = true
 
 export default handler
 

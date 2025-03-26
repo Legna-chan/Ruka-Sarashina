@@ -26,10 +26,9 @@ let handler = async (m, { conn, args }) => {
     let perfil = await conn.profilePictureUrl(userId, 'image').catch(_ => 'https://files.catbox.moe/xr2m6u.jpg');
 
     let profileText = `
-「✿」 *Perfil* ◢@${userId.split('@')[0]}◤
+「🌸」 *Perfil* ◢@${userId.split('@')[0]}◤
 ${description}
 
-✦ Edad » ${user.age || 'Desconocida'}
 ♛ *Cumpleaños* » ${cumpleanos}
 ⚥ *Género* » ${genero}
 ♡ *Casado con* » ${pareja}

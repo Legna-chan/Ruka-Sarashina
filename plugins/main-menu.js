@@ -12,7 +12,7 @@ let handler = async (m, { conn, args }) => {
     let txt = `
 *!𝙷𝚘𝚕𝚊! 𝚎𝚜𝚝𝚎 𝚎𝚜 𝚎𝚕 𝚖𝚎𝚗𝚞 𝚍𝚎 ${botname}*
 ╭──❀•°❀°•❀──╮  
-┃ ✦ Cliente ➩ @${userId.split('@')[0]}  
+┃ ✐ Cliente ➩ @${userId.split('@')[0]}  
 ┃ ❀ Editor ➩ @Legna 
 ┃ ✦ Bot ➩ ${(conn.user.jid == global.conn.user.jid ? 'Principal 🅥' : 'Sub-bot 🆂')}  
 ┃ ⴵ Activa ➩ ${uptime}  
@@ -20,112 +20,108 @@ let handler = async (m, { conn, args }) => {
 ┃ ❏ Versión ➩ 1.0.0  
 ╰──❀•°❀°•❀──╯
 
-• :･ﾟ⊹˚• \`『 Info-Bot 』\` •˚⊹:･ﾟ•
+🍃  •/• \`Info-Bot\` •/•
 
 ☄︎ ᥴ᥆mᥲᥒძ᥆s ⍴ᥲrᥲ ᥎ᥱr ᥱs𝗍ᥲძ᥆ ᥱ іᥒ𝖿᥆rmᥲᥴі᥆́ᥒ ძᥱ ᥣᥲ ᑲ᥆𝗍. 
 
-ᰔᩚ *#help • #menu*
-> ✦ Ver la lista de comandos de la Bot.
-ᰔᩚ *#uptime • #runtime*
-> ✦ Ver tiempo activo o en linea de la Bot.
-ᰔᩚ *#serbot • #serbot code*
-> ✦ Crea una sesión de Sub-Bot.
-ᰔᩚ *#bots • #sockets*
-> ✦ Ver la lista de Sub-Bots activos.
-ᰔᩚ *#status • #estado*
-> ✦ Ver el estado actual de la Bot.
-ᰔᩚ *#links • #grupos*
-> ✦ Ver los enlaces oficiales de la Bot.
-ᰔᩚ *#infobot • #infobot*
-> ✦ Ver la información completa de la Bot.
-ᰔᩚ *#p • #ping*
-> ✦ Ver la velocidad de respuesta del Bot.
-ᰔᩚ *#reporte • #reportar*
-> ✦ Reporta alguna falla o problema de la Bot.
-ᰔᩚ *#sistema • #system*
-> ✦ Ver estado del sistema de alojamiento.
-ᰔᩚ *#speed • #speedtest*
-> ✦ Ver las estadísticas de velocidad de la Bot.
-ᰔᩚ *#views • #usuarios*
-> ✦ Ver la cantidad de usuarios registrados en el sistema.
-ᰔᩚ *#ds • #fixmsgespera*
-> ✦ Eliminar archivos de sesión innecesarios.
-ᰔᩚ *#editautoresponder*
-> ✦ Configurar un Prompt personalizado de la Bot.
+✤ *#help • #menu*
+> ➮ Ver la lista de comandos de la Bot.
+✤ *#uptime • #runtime*
+> ➮ Ver tiempo activo o en linea de la bot. 
+✤ *#qr • #code*
+> ➮ Crea una sesión de Sub-Bot
+✤ *#bots • #sockets*
+> ➮ Ver la lista de Sub-Bots activos.
+✤ *#status • #estado*
+> ➮ Ver el estado actual de la Bot.
+✤ *#links • #grupos*
+> ➮ Ver los enlaces oficiales de la Bot.
+✤ *#infobot • #infobot*
+> ➮ Ver la información completa de la Bot.
+✤ *#p • #ping*
+> ➮ Ver la velocidad de respuesta del Bot.
+✤ *#reporte • #reportar*
+> ➮ Reporta alguna falla o problema de la Bot.
+✤ *#sistema • #system*
+> ➮ Ver estado del sistema de alojamiento.
+✤ *#speed • #speedtest*
+> ➮ Ver las estadísticas de velocidad de la Bot.
+✤ *#views • #usuarios*
+> ➮ Ver la cantidad de usuarios registrados en el sistema.
+✤ *#ds • #fixmsgespera*
+> ➮ Eliminar archivos de sesión innecesarios.
+✤ *#editautoresponder*
+> ➮ Configurar un Prompt personalizado de la Bot.
 
-• :･ﾟ⊹˚• \`『 Buscadores 』\` •˚⊹:･ﾟ•
+🍃  •/• \`Buscadores\` •/•
 
 ☄︎ ᥴ᥆mᥲᥒძ᥆s ⍴ᥲrᥲ rᥱᥲᥣіzᥲr ᑲᥙ́s𝗊ᥙᥱძᥲs ᥱᥒ ძіs𝗍іᥒ𝗍ᥲs ⍴ᥣᥲ𝗍ᥲ𝖿᥆rmᥲs. 
 
-ᰔᩚ *#tiktoksearch • #tiktoks*
-> ✦ Buscador de videos de tiktok.
-ᰔᩚ *#tweetposts*
-> ✦ Buscador de posts de Twitter/X.
-ᰔᩚ *#ytsearch • #yts*
-> ✦ Realiza búsquedas de Youtube.
-ᰔᩚ *#githubsearch*
-> ✦ Buscador de usuarios de GitHub.
-ᰔᩚ *#google*
-> ✦ Realiza búsquedas por Google.
-ᰔᩚ *#pin • #pinterest*
-> ✦ Buscador de imagenes de Pinterest.
-ᰔᩚ *#imagen • #image*
-> ✦ buscador de imagenes de Google.
-ᰔᩚ *#animesearch • #animess*
-> ✦ Buscador de animes de tioanime.
-ᰔᩚ *#animei • #animeinfo*
-> ✦ Buscador de capítulos de #animesearch.
-ᰔᩚ *#infoanime*
-> ✦ Buscador de información de anime/manga.
-ᰔᩚ *#hentaisearch • #searchhentai*
-> ✦ Buscador de capítulos hentai.
-ᰔᩚ #xnxxsearch • #xnxxs*
-> ✦ Buscador de vídeos de Xnxx.
-ᰔᩚ *#xvsearch • #xvideossearch*
-> ✦ Buscador de vídeos de Xvideos.
-ᰔᩚ *#pornhubsearch • #phsearch*
-> ✦ Buscador de videos de Pornhub.
-ᰔᩚ *#npmjs*
-> ✦ Buscandor de npmjs.
+✤ *#tiktoksearch • #tiktoks*
+> ➮ Buscador de videos de tiktok.
+✤ *#tweetposts*
+> ➮ Buscador de posts de Twitter/X.
+✤ *#ytsearch • #yts*
+> ➮ Realiza búsquedas de Youtube.
+✤ *#githubsearch*
+> ➮ Buscador de usuarios de GitHub.
+✤ *#google*
+> ➮ Realiza búsquedas por Google.
+✤ *#pin • #pinterest*
+> ➮ Buscador de imagenes de Pinterest.
+✤ *#imagen • #image*
+> ➮ buscador de imagenes de Google.
+✤ *#animesearch • #animess*
+> ➮ Buscador de animes de tioanime.
+✤ *#animei • #animeinfo*
+> ➮ Buscador de capítulos de #animesearch.
+✤ *#infoanime*
+> ➮ Buscador de información de anime/manga.
+✤ *#hentaisearch • #searchhentai*
+> ➮ Buscador de capítulos hentai.
+✤ #xnxxsearch • #xnxxs*
+> ➮ Buscador de vídeos de Xnxx.
+✤ *#xvsearch • #xvideossearch*
+> ➮ Buscador de vídeos de Xvideos.
+✤ *#pornhubsearch • #phsearch*
+> ➮ Buscador de videos de Pornhub.
+✤ *#npmjs*
+> ➮ Buscandor de npmjs.
 
-• :･ﾟ⊹˚• \`『 Descargas 』\` •˚⊹:･ﾟ•
+🍃  •/• \`Descargas\` •/•
 
 ☄︎ ᥴ᥆mᥲᥒძ᥆s ძᥱ ძᥱsᥴᥲrgᥲs ⍴ᥲrᥲ ᥎ᥲrі᥆s ᥲrᥴһі᥎᥆s. 
 .
-ᰔᩚ *#tiktok • #tt*
-> ✦ Descarga videos de TikTok.
-ᰔᩚ *#mediafire • #mf*
-> ✦ Descargar un archivo de MediaFire.
-ᰔᩚ *#pinvid • #pinvideo* + [enlacé]
-> ✦ Descargar vídeos de Pinterest. 
-ᰔᩚ *#mega • #mg* + [enlacé]
-> ✦ Descargar un archivo de MEGA.
-ᰔᩚ *#play • #play2*
-> ✦ Descarga música/video de YouTube.
-ᰔᩚ *#ytmp3 • #ytmp4*
-> ✦ Descarga música/video de YouTube mediante url.
-ᰔᩚ *#fb • #facebook*
-> ✦ Descarga videos de Facebook.
-ᰔᩚ *#twitter • #x* + [Link]
-> ✦ Descargar un video de Twitter/X
-ᰔᩚ *#ig • #instagram*
-> ✦ Descarga contenido de Instagram.
-ᰔᩚ *#tts • #tiktoks* + [busqueda]
-> ✦ Buscar videos de tiktok 
-ᰔᩚ *#gitclone* + <url> 
-> ✦ Descarga un repositorio de github.
-ᰔᩚ *#xvideosdl*
-> ✦ Descarga videos porno de (Xvideos). 
-ᰔᩚ *#xnxxdl*
-> ✦ Descarga videos porno de (xnxx).
-ᰔᩚ *#tiktokrandom • #ttrandom*
-> ✦ Descarga un video aleatorio de tiktok.
-ᰔᩚ *#npmdl • #npmdownloader*
-> ✦ Descarga paquetes de NPMJs.
-ᰔᩚ *#animelinks • #animedl*
-> ✦ Descarga Links disponibles de descargas.
+✤ *#tiktok • #tt*
+> ➮ Descarga videos de TikTok.
+✤ *#pinvid • #pinvideo* + [enlacé]
+> ➮ Descargar vídeos de Pinterest. 
+✤ *#play • #play2*
+> ➮ Descarga música/video de YouTube.
+✤ *#ytmp3 • #ytmp4*
+> ➮ Descarga música/video de YouTube mediante url.
+✤ *#fb • #facebook*
+> ➮ Descarga videos de Facebook.
+✤ *#twitter • #x* + [Link]
+> ➮ Descargar un video de Twitter/X
+✤ *#ig • #instagram*
+> ➮ Descarga contenido de Instagram.
+✤ *#tts • #tiktoks* + [busqueda]
+> ➮ Buscar videos de tiktok 
+✤ *#gitclone* + <url> 
+> ➮ Descarga un repositorio de github.
+✤ *#xvideosdl*
+> ➮ Descarga videos porno de (Xvideos). 
+✤ *#xnxxdl*
+> ➮ Descarga videos porno de (xnxx).
+✤ *#tiktokrandom • #ttrandom*
+> ➮ Descarga un video aleatorio de tiktok.
+✤ *#npmdl • #npmdownloader*
+> ➮ Descarga paquetes de NPMJs.
+✤ *#animelinks • #animedl*
+> ➮ Descarga Links disponibles de descargas.
 
-• :･ﾟ⊹˚• \`『 Economia 』\` •˚⊹:･ﾟ•
+🍃  •/• \`Economia\` •/•
 
 ☄︎ ᥴ᥆mᥲᥒძ᥆s ძᥱ ᥱᥴ᥆ᥒ᥆mі́ᥲ ᥡ r⍴g ⍴ᥲrᥲ gᥲᥒᥲr ძіᥒᥱr᥆ ᥡ ᥆𝗍r᥆s rᥱᥴᥙrs᥆s. 
 
@@ -182,7 +178,7 @@ let handler = async (m, { conn, args }) => {
 ᰔᩚ *#mazmorra • #explorar*
 > ✦ Explorar mazmorras para ganar ${moneda}.
 
-• :･ﾟ⊹˚• \`『 Stickers 』\` •˚⊹:･ﾟ•
+🍃  •/• \`Stickers\` •/•
 
 ☄︎ ᥴ᥆mᥲᥒძ᥆s ⍴ᥲrᥲ ᥴrᥱᥲᥴі᥆ᥒᥱs ძᥱ s𝗍іᥴkᥱrs ᥱ𝗍ᥴ. 
 
@@ -203,7 +199,7 @@ let handler = async (m, { conn, args }) => {
 ᰔᩚ *#emojimix*
 > ✦ Fuciona 2 emojis para crear un sticker.
 
-• :･ﾟ⊹˚• \`『 Perfil 』\` •˚⊹:･ﾟ•
+🍃  •/• \`Perfil\` •/•
 
 ☄︎ ᥴ᥆mᥲᥒძ᥆s ძᥱ ⍴ᥱr𝖿іᥣ ⍴ᥲrᥲ ᥎ᥱr, ᥴ᥆ᥒ𝖿іgᥙrᥲr ᥡ ᥴ᥆m⍴r᥆ᑲᥲr ᥱs𝗍ᥲძ᥆s ძᥱ 𝗍ᥙ ⍴ᥱr𝖿іᥣ. 
 
@@ -234,7 +230,7 @@ let handler = async (m, { conn, args }) => {
 ᰔᩚ *#confesiones • #confesar*
 > ✦ Confiesa tus sentimientos a alguien de manera anonima.
 
-• :･ﾟ⊹˚• \`『 Grupos 』\` •˚⊹:･ﾟ•
+🍃  •/• \`Grupos\` •/•
 
 ☄︎ ᥴ᥆mᥲᥒძ᥆s ძᥱ grᥙ⍴᥆s ⍴ᥲrᥲ ᥙᥒᥲ mᥱȷ᥆r gᥱs𝗍і᥆́ᥒ ძᥱ ᥱᥣᥣ᥆s. 
 
@@ -276,10 +272,10 @@ let handler = async (m, { conn, args }) => {
 > ✦ Quitar advertencias.
 ᰔᩚ *#advlist • #listadv*
 > ✦ Ver lista de usuarios advertidos.
-ᰔᩚ *#banchat*
-> ✦ Banear el Bot en un chat o grupo.
-ᰔᩚ *#unbanchat*
-> ✦ Desbanear el Bot del chat o grupo.
+ᰔᩚ *#bot on*
+> ✦ activa el bot en un grupo.
+ᰔᩚ *#bot off*
+> ✦ Desactiva el bot en un grupo.
 ᰔᩚ *#mute* [mension / etiquetar]
 > ✦ El bot elimina los mensajes del usuario.
 ᰔᩚ *#unmute* [mension / etiquetar]
@@ -299,7 +295,7 @@ let handler = async (m, { conn, args }) => {
 ᰔᩚ *#listnum • #kicknum*
 > ✦ Elimine a usuario por el prefijo de país.
 
-• :･ﾟ⊹˚• \`『 Anime 』\` •˚⊹:･ﾟ•
+🍃  •/• \`Anime\` •/•
 
 ☄︎ ᥴ᥆mᥲᥒძ᥆s ძᥱ rᥱᥲᥴᥴі᥆́ᥒ ᥲᥒіmᥱ. 
 
@@ -372,7 +368,7 @@ let handler = async (m, { conn, args }) => {
 ᰔᩚ *#think* + <mencion>
 > ✦ Pensar en algo
 
-• :･ﾟ⊹˚• \`『 NSFW 』\` •˚⊹:･ﾟ•
+🍃  •/• \`Nsfw\` •/•
 
 ☄︎ ᥴ᥆mᥲᥒძ᥆s ᥒs𝖿ᥕ (⍴ᥲrᥲ ᥲძᥙᥣ𝗍᥆s). 
 
@@ -419,7 +415,7 @@ let handler = async (m, { conn, args }) => {
 ᰔᩚ *#yuri • #tijeras* + <mencion>
 > ✦ Hacer tijeras.
 
-• :･ﾟ⊹˚• \`『 Juegos 』\` •˚⊹:･ﾟ•
+🍃  •/• \`Juegos\` •/•
 
 ☄︎ ᥴ᥆mᥲᥒძ᥆s ძᥱ ȷᥙᥱg᥆s ⍴ᥲrᥲ ȷᥙgᥲr ᥡ ძі᥎ᥱr𝗍іr𝗍ᥱ ᥴ᥆ᥒ 𝗍ᥙs ᥲmіg᥆s. 
 
