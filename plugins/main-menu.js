@@ -63,8 +63,6 @@ let handler = async (m, { conn, args }) => {
 > ➮ Buscador de posts de Twitter/X.
 ✤ *#ytsearch • #yts*
 > ➮ Realiza búsquedas de Youtube.
-✤ *#githubsearch*
-> ➮ Buscador de usuarios de GitHub.
 ✤ *#google*
 > ➮ Realiza búsquedas por Google.
 ✤ *#imagen • #image*
@@ -104,8 +102,6 @@ let handler = async (m, { conn, args }) => {
 > ➮ Descarga contenido de Instagram.
 ✤ *#tts • #tiktoks* + [busqueda]
 > ➮ Buscar videos de tiktok 
-✤ *#gitclone* + <url> 
-> ➮ Descarga un repositorio de github.
 ✤ *#xvideosdl*
 > ➮ Descarga videos porno de (Xvideos). 
 ✤ *#xnxxdl*
