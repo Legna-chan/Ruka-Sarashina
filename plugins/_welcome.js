@@ -57,13 +57,13 @@ export async function before(m, { conn, participants, groupMetadata }) {
       let bienvenida = `┏━━━━━━━━━━━━━━━━┅┈
 ┃      🄱🄸🄴🄽🅅🄴🄽🄸🄳🄾
 ┣━━━━━━━━━━━━━━━━┅┈
-┃ 𝗨𝘀𝘂𝗮𝗿𝗶𝗼: ${taguser}
+┃ usuarios: ${taguser}
 ┃
-┃ 𝗚𝗿𝗨𝗽𝗢: ${groupMetadata.subject}
+┃ grupo: ${groupMetadata.subject}
 ┃
-┃ 𝗠𝗶𝗲𝗺𝗯𝗿𝗼𝘀: ${totalMembers + 1}
+┃ miembros: ${totalMembers + 1}
 ┃
-┃ 𝗙𝗲𝗰𝗵𝗮: ${date}
+┃ fecha: ${date}
 ┃
 ┗━━━━━━━━━━━━━━━━┅┈
 
@@ -77,13 +77,13 @@ ${fraseRandomBienvenida}`
       let despedida = `┏━━━━━━━━━━━━━━━━┅┈
 ┃       🄱.    🄰.    🅈.
 ┣━━━━━━━━━━━━━━━━┅┈
-┃ 𝗨𝘀𝘂𝗮𝗿𝗶𝗼: ${taguser}
+┃ ᥙsᥙᥲrі᥆: ${taguser}
 ┃
-┃ 𝗚𝗿𝗨𝗽𝗢: ${groupMetadata.subject}
+┃ grᥙ⍴᥆: ${groupMetadata.subject}
 ┃
-┃ 𝗠𝗶𝗲𝗺𝗯𝗿𝗼𝘀: ${totalMembers - 1}
+┃ mіᥱmᑲr᥆s: ${totalMembers - 1}
 ┃
-┃ 𝗙𝗲𝗰𝗵𝗮: ${date}
+┃ 𝖿ᥱᥴһᥲ: ${date}
 ┃
 ┗━━━━━━━━━━━━━━━━┅┈
 > Frase de despedida
