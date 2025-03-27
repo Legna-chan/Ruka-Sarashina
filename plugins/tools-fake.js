@@ -21,7 +21,6 @@ conn.fakeReply(m.chat, real.join(sp).trimStart(), who, fake.trimEnd(), m.isGroup
 handler.help = ['fake']
 handler.tags = ['tools']
 handler.command = ['fitnah', 'fakereply', 'fake']
-handler.register = true
 handler.group = true
 
 export default handler
