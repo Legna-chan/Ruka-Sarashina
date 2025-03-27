@@ -14,6 +14,5 @@ handler.help = ['ship', 'love']
 handler.tags = ['fun']
 handler.command = ['ship','pareja']
 handler.group = true;
-handler.register = true
 
 export default handler
