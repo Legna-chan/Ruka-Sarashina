@@ -63,8 +63,6 @@ let handler = async (m, { conn, args }) => {
 > ➮ Buscador de posts de Twitter/X.
 ✤ *#ytsearch • #yts*
 > ➮ Realiza búsquedas de Youtube.
-✤ *#githubsearch*
-> ➮ Buscador de usuarios de GitHub.
 ✤ *#google*
 > ➮ Realiza búsquedas por Google.
 ✤ *#imagen • #image*
@@ -104,8 +102,6 @@ let handler = async (m, { conn, args }) => {
 > ➮ Descarga contenido de Instagram.
 ✤ *#tts • #tiktoks* + [busqueda]
 > ➮ Buscar videos de tiktok 
-✤ *#gitclone* + <url> 
-> ➮ Descarga un repositorio de github.
 ✤ *#xvideosdl*
 > ➮ Descarga videos porno de (Xvideos). 
 ✤ *#xnxxdl*
@@ -127,7 +123,7 @@ let handler = async (m, { conn, args }) => {
 > ✦ Trabaja como prostituta y gana ${moneda}.
 ᰔᩚ *#cf • #suerte*
 > ✦ Apuesta tus ${moneda} a cara o cruz.
-ᰔᩚ *#crime • #crimen
+ᰔᩚ *#crime • #crimen*
 > ✦ Trabaja como ladrón para ganar ${moneda}.
 ᰔᩚ *#ruleta • #roulette • #rt*
 > ✦ Apuesta ${moneda} al color rojo o negro.
@@ -173,6 +169,8 @@ let handler = async (m, { conn, args }) => {
 > ✦ Ver tu inventario con todos tus ítems.
 ᰔᩚ *#mazmorra • #explorar*
 > ✦ Explorar mazmorras para ganar ${moneda}.
+✤ *#pescar • #fishing*
+> ➮ gana ${moneda} pescando.
 
 🍃  •/• \`Stickers\` •/•
 
