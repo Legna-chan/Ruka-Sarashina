@@ -13,6 +13,5 @@ handler.help = ['formarpareja'];
 handler.tags = ['fun'];
 handler.command = ['formarpareja', 'formarparejas'];
 handler.group = true;
-handler.register = true;
 
 export default handler;
