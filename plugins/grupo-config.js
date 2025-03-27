@@ -26,3 +26,17 @@ let handler = async (m, { conn, args, command }) => {
   }
 
   if (isClose === 'announcement') {
+    await conn.sendMessage(m.chat, { 
+      text: `🍭 *Solo los admins pueden escribir en este grupo.*`, 
+      image: { url: defaultImage }
+    }, { quoted: m });
+  }
+}
+
+handler.help = ['group open / close', 'grupo abrir / cerrar'];
+handler.tags = ['grupo'];
+handler.command = ['group', 'grupo'];
+handler.admin = true;
+handler.botAdmin = true;
+
+export default handler;
