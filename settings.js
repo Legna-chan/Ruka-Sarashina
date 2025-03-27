@@ -50,7 +50,7 @@ global.etiqueta = 'Legna'
 //*─────────────────────────────────────────────────────────────────────────────*
 
 global.moneda = 'YamiCoins'
-global.catalogo = fs.readFileSync('./storage/img/catalogo.png');
+global.catalogo = fs.existsSync('./catalogo.jpg') ? 'Archivo catalogo.jpg encontrado' : 'No se encontró el archivo';
 
 //*─────────────────────────────────────────────────────────────────────────────*
 
