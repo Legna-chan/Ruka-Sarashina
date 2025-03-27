@@ -50,7 +50,7 @@ global.etiqueta = 'Legna'
 //*─────────────────────────────────────────────────────────────────────────────*
 
 global.moneda = 'YamiCoins'
-global.catalogo = fs.readdirSync('./catalogo.jpg').join(', ');
+global.catalogo = fs.readdirSync('./catalogo.jpg') 
 
 //*─────────────────────────────────────────────────────────────────────────────*
 
