@@ -33,7 +33,7 @@ m.coin = false
 try {
 let user = global.db.data.users[m.sender]
 if (typeof user !== 'object')
-
+  
 global.db.data.users[m.sender] = {}
 if (user) {
 if (!isNumber(user.exp))
@@ -84,6 +84,7 @@ if (!('description' in user))
 user.description = ''
 if (!('packstickers' in user))
 user.packstickers = ''
+if (!user.registered) {
 if (!('name' in user))
 user.name = m.name
 if (!isNumber(user.age))
@@ -124,6 +125,7 @@ lastpago: 0,
 lastmining: 0,
 lastcodereg: 0,
 muto: false,
+registered: false,
 genre: '',
 birth: '',
 marry: '',
@@ -369,7 +371,7 @@ continue
 m.plugin = name
 if (m.chat in global.db.data.chats || m.sender in global.db.data.users) {
 let chat = global.db.data.chats[m.chat]
-let user = global.db.data.users[m.sender] || {}; || {};
+let user = global.db.data.users[m.sender]
 if (!['grupo-unbanchat.js'].includes(name) && chat && chat.isBanned && !isROwner) return // Except this
 if (name != 'grupo-unbanchat.js' && name != 'owner-exec.js' && name != 'owner-exec2.js' && name != 'grupo-delete.js' && chat?.isBanned && !isROwner) return 
 if (m.text && user.banned && !isROwner) {
@@ -388,7 +390,7 @@ global.db.data.users[m.sender].spam = new Date * 1
 
 if (m.chat in global.db.data.chats || m.sender in global.db.data.users) {
 let chat = global.db.data.chats[m.chat]
-let user = global.db.data.users[m.sender] || {};
+let user = global.db.data.users[m.sender]
 let setting = global.db.data.settings[this.user.jid]
 if (name != 'grupo-unbanchat.js' && chat?.isBanned)
 return 
@@ -431,6 +433,10 @@ continue
 }
 if (plugin.private && m.isGroup) {
 fail('private', m, this)
+continue
+}
+if (plugin.register == true && _user.registered == false) { 
+fail('unreg', m, this)
 continue
 }
 m.isCommand = true
@@ -583,6 +589,10 @@ console.error(e)
 }}
 
 global.dfail = (type, m, usedPrefix, command, conn) => {
+
+let edadaleatoria = ['10', '28', '20', '40', '18', '21', '15', '11', '9', '17', '25'].getRandom()
+let user2 = m.pushName || 'Anónimo'
+let verifyaleatorio = ['registrar', 'reg', 'verificar', 'verify', 'register'].getRandom()
 
 const msg = {
 rowner: `『✰』El comando *${comando}* solo puede ser usado por los creadores del bot.`, 
