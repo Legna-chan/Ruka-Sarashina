@@ -1,5 +1,5 @@
 let handler = async (m, { conn, args, command }) => {
-  const defaultlmage = 'https://qu.ax/nYpbV.jpg'; conn.profilePictureUrl(m.chat, 'image').catch(_ => icons);
+  const defaultlmage = 'https://files.catbox.moe/guceih.jpg'; conn.profilePictureUrl(m.chat, 'image').catch(_ => icons);
   
   let isClose = { // Mapa de opciones
     'open': 'not_announcement',
