@@ -50,7 +50,7 @@ global.etiqueta = 'Legna'
 //*─────────────────────────────────────────────────────────────────────────────*
 
 global.moneda = 'YamiCoins'
-global.banner = 'https://qu.ax/nYpbV.jpg'
+global.catalogo = './src/catálogo.png';
 
 //*─────────────────────────────────────────────────────────────────────────────*
 
@@ -58,13 +58,13 @@ global.gp1 = 'https://chat.whatsapp.com/Ecz881bBgqPIWjDOaKkp7E'
 global.comunidad1 = 'https://chat.whatsapp.com/EwrwcGvpLf1BnMhP3B4axD'
 global.channel = 'https://whatsapp.com/channel/0029VapSIvR5EjxsD1B7hU3T'
 global.channel2 = 'https://whatsapp.com/channel/0029VapSIvR5EjxsD1B7hU3T'
-global.md = 'https://github.com/The-King-Destroy/Yuki_Suou-Bot'
+global.md = 'https://github.com/Legna-chan/Konjiki-No-Yami'
 global.correo = 'legnakujou@gmail.com'
 global.cn ='https://whatsapp.com/channel/0029VapSIvR5EjxsD1B7hU3T';
 
 //*─────────────────────────────────────────────────────────────────────────────*
 
-global.catalogo = fs.readFileSync('./src/catalogo.jpg');
+global.catalogo = fs.readFileSync('./src/catalogo.png');
 global.estilo = { key: {  fromMe: false, participant: `0@s.whatsapp.net`, ...(false ? { remoteJid: "5219992095479-1625305606@g.us" } : {}) }, message: { orderMessage: { itemCount : -999999, status: 1, surface : 1, message: packname, orderTitle: 'Bang', thumbnail: catalogo, sellerJid: '0@s.whatsapp.net'}}}
 global.ch = {
 ch1: '120363322713003916@newsletter',
