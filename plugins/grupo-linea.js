@@ -30,6 +30,5 @@ handler.tags = ["grupo"];
 handler.command = ["listonline", "online", "linea", "enlinea"];
 handler.group = true;
 handler.fail = null;
-handler.register = true;
 
 export default handler;
