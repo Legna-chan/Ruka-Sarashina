@@ -54,19 +54,12 @@ export async function before(m, { conn, participants, groupMetadata }) {
 
   if (chat.welcome) {
     if (m.messageStubType === WAMessageStubType.GROUP_PARTICIPANT_ADD) {
-      let bienvenida = `┏━━━━━━━━━━━━━━━━┅┈
-┃   ｂｉｅｎｖｅｎｉｄ@
-┣━━━━━━━━━━━━━━━━┅┈
-┃ usuarios: ${taguser}
-┃
-┃ grupo: ${groupMetadata.subject}
-┃
-┃ miembros: ${totalMembers + 1}
-┃
-┃ fecha: ${date}
-┃
-┗━━━━━━━━━━━━━━━━┅┈
-
+      let bienvenida = `╭─❏ *🍭 bienvenid@ al grupo!!* ❏─╮  
+│ 👤 *Usuario:* @${taguser}  
+│ 🏠 *Grupo:* ${groupMetadata.subject}  
+│ 👥 *Miembros:* ${totalMembers - 1}  
+│ 📅 *Fecha:* ${date}  
+╰──────────────────╯  
 > Frase de bienvenida 🌸
 ${fraseRandomBienvenida}` 
       await conn.sendMessage(m.chat, { video: { url: videoUrl }, gifPlayback: true, caption: bienvenida, mentions: [who] })
@@ -74,19 +67,13 @@ ${fraseRandomBienvenida}`
 
     if (m.messageStubType === WAMessageStubType.GROUP_PARTICIPANT_LEAVE ||
         m.messageStubType === WAMessageStubType.GROUP_PARTICIPANT_REMOVE) {
-      let despedida = `┏━━━━━━━━━━━━━━━━┅┈
-┃   ｈａｓｔａ ｐｒｏｎｔｏ 
-┣━━━━━━━━━━━━━━━━┅┈
-┃ ᥙsᥙᥲrі᥆: ${taguser}
-┃
-┃ grᥙ⍴᥆: ${groupMetadata.subject}
-┃
-┃ mіᥱmᑲr᥆s: ${totalMembers - 1}
-┃
-┃ 𝖿ᥱᥴһᥲ: ${date}
-┃
-┗━━━━━━━━━━━━━━━━┅┈
-> Frase de despedida 🌸
+      let despedida = `╭─❏ *👋 Hasta pronto* ❏─╮  
+│ 👤 *Usuario:* @${taguser}  
+│ 🏠 *Grupo:* ${groupMetadata.subject}  
+│ 👥 *Miembros:* ${totalMembers - 1}  
+│ 📅 *Fecha:* ${date}  
+╰──────────────────╯  
+> frase de despedida 🌷
 ${fraseRandomDespedida}` 
       await conn.sendMessage(m.chat, { video: { url: videoUrl }, gifPlayback: true, caption: despedida, mentions: [who] })
     }
