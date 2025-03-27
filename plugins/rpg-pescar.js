@@ -5,7 +5,7 @@ let handler = async (m, { conn, isPrems }) => {
     let tiempo = 15 * 60  // Cambié el cooldown a 15 minutos
     if (cooldowns[m.sender] && Date.now() - cooldowns[m.sender] < tiempo * 1000) {
         const tiempo2 = segundosAHMS(Math.ceil((cooldowns[m.sender] + tiempo * 1000 - Date.now()) / 1000))
-        conn.reply(m.chat, `⏳ Debes esperar *${tiempo2}* para pescar de nuevo.`, m)
+        conn.reply(m.chat, `🌸 Debes esperar *${tiempo2}* para pescar de nuevo.`, m)
         return
     }
     
@@ -16,7 +16,7 @@ let handler = async (m, { conn, isPrems }) => {
     let ganancia = Math.random() < 0.5 ? 200 : 300
 
     cooldowns[m.sender] = Date.now()
-    await conn.reply(m.chat, `🎣 ¡Pescaste *${cantidadPescados}* peces y ganaste *${toNum(ganancia)}* ${moneda} 💰!`, m)
+    await conn.reply(m.chat, `🎋 ¡Pescaste *${cantidadPescados}* peces y ganaste *${toNum(ganancia)}* ${moneda} 🍭!`, m)
     
     user.coin += ganancia
 }
