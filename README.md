@@ -1,8 +1,8 @@
 <h1 align="center">🌴
- Yami-chan 🌴
+ Ruka-chan 🌴
 </h1>
 
- <img src= "https://qu.ax/FVCRF.jpg">
+ <img src= "https://files.catbox.moe/gsiong.jpg">
     </p>
 
 ### **`✰ Créditos ✰`**
