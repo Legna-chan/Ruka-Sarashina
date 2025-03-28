@@ -14,6 +14,7 @@ let tags = {
   'info': 'іᥒ𝖿᥆-ᑲ᥆𝗍',
   'owner': '𝙲𝚁𝙴𝙰𝙳𝙾𝚁', 
   'ai': 'ᥲі',
+  'perfil': '⍴ᥱr𝖿іᥣ', 
 }
 
 const defaultMenu = {
@@ -33,7 +34,7 @@ const defaultMenu = {
 \t *𝙻 𝙸 𝚂 𝚃 𝙰 - 𝙲 𝙾 𝙼 𝙰 𝙽 𝙳 𝙾 𝚂* 
 `.trimStart(),
     header:'•/• %category •/•\n',
-  body: '🍃%cmd',
+  body: '✐%cmd',
   footer: '',
   after: `> ${dev}`,
 }
