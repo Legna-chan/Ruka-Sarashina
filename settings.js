@@ -51,7 +51,7 @@ global.etiqueta = 'Legna'
 
 global.moneda = 'RukaCoins'
 global.catalogo = './src/catálogo.png';
-global.banner = 'https://files.catbox.moe/kxdggo.jpg'
+global.banner = 'https://files.catbox.moe/68dhy7.jpg'
 //*─────────────────────────────────────────────────────────────────────────────*
 
 global.gp1 = 'https://chat.whatsapp.com/Ecz881bBgqPIWjDOaKkp7E'
