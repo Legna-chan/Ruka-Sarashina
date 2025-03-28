@@ -6,7 +6,6 @@ import { xpRange } from '../lib/levelling.js'
 let tags = {
   'info': 'іᥒ𝖿᥆-ᑲ᥆𝗍', 
   'buscador': 'ᑲᥙsᥴᥲძ᥆rᥱs', 
-  'buscador': 'ᑲᥙsᥴᥲძ᥆rᥱs', 
   'descargas': 'ძᥱsᥴᥲrgᥲs',
   'rpg': 'ᥱᥴ᥆ᥒ᥆mіᥲ',
   'sticker': 's𝗍іᥴkᥱrs',
