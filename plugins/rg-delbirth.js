@@ -15,6 +15,6 @@ return conn.reply(m.chat, `${emoji} Tu fecha de nacimiento ha sido eliminada.`, 
 };
 
 handler.help = ['delbirth']
-handler.tags = ['rg']
+handler.tags = ['perfil']
 handler.command = ['delbirth']
 export default handler;
