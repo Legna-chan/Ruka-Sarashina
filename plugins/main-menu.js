@@ -169,7 +169,6 @@ await conn.sendMessage(m.chat, {video: {url: gifUrl}, gifPlayback: true, caption
 handler.help = ['menu']
 handler.tags = ['main']
 handler.command = ['menu', 'help','allmenu', 'menú'] 
-handler.register = true 
 export default handler
 
 const more = String.fromCharCode(8206)
