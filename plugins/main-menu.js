@@ -12,23 +12,22 @@ let handler = async (m, { conn, usedPrefix, __dirname }) => {
     let _uptime = process.uptime() * 1000
     let uptime = clockString(_uptime)
     let totalreg = Object.keys(global.db.data.users).length
-    let perfil = await conn.profilePictureUrl(userId, 'image').catch(_ => 'https://files.catbox.moe/56t2l6.jpg')
     let taguser = '@' + userId.split("@s.whatsapp.net")[0]
 
     let images = [
-      'https://files.catbox.moe/56t2l6.jpg',
+      'https://files.catbox.moe/56t2l6.jpg', // Aquí puedes dejar un enlace vacío o eliminarlo
       'https://files.catbox.moe/56t2l6.jpg',
       'https://files.catbox.moe/56t2l6.jpg'
     ]
-    let randomImage = images[Math.floor(Math.random() * images.length)]  
+    let randomImage = ''  // Eliminamos la foto, dejamos una cadena vacía.
 
     let botname = '𝐊𝐢𝐫𝐢𝐭𝐨 - 𝐁𝐨𝐭 𝐌𝐃'
     let dev = 'Desarrollador: Deylin'
     let redes = 'https://whatsapp.com/channel/0029VawF8fBBvvsktcInIz3m'
-        let totalCommands = Object.values(global.plugins).filter((v) => v.help && v.tags).length;
+    let totalCommands = Object.values(global.plugins).filter((v) => v.help && v.tags).length;
     let emojis = '✅'
-    let error = '❌'
-
+    let error = '❌'  
+ 
     let menu = `
 *⌬━━━━━▣━━◤⌬◢━━▣━━━━━━⌬*
 
