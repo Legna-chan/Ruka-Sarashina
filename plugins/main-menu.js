@@ -26,7 +26,7 @@ let handler = async (m, { conn, usedPrefix, __dirname }) => {
 
     let botname = 'rᥙkᥲ sᥲrᥲsһіᥒᥲ'
     let dev = 'Desarrollado por legna'
-    let emojis = '✅'
+    let emojis = '🌸'
     let error = '❌'
 
     let menu = `
