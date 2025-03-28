@@ -39,17 +39,17 @@ global.yamiJadibts = true
 
 //*─────────────────────────────────────────────────────────────────────────────*
 
-global.packname = 'Konjiki No Yami'
-global.botname = 'Konjiki No Yami'
-global.wm = 'Konjiki No Yami'
+global.packname = 'Ruka Sarashina'
+global.botname = 'Ruka Sarashina'
+global.wm = 'Ruka Sarashina'
 global.author = 'Desarrollado por Legna'
 global.dev = 'Desarrollado por Legna'
-global.textbot = 'Konjiki No Yami • Desarrollado por Legna'
+global.textbot = 'Ruka Sarashina •  Desarrollado por Legna'
 global.etiqueta = 'Legna'
 
 //*─────────────────────────────────────────────────────────────────────────────*
 
-global.moneda = 'YamiCoins'
+global.moneda = 'RukaCoins'
 global.catalogo = './src/catálogo.png';
 global.banner = 'https://files.catbox.moe/kxdggo.jpg'
 //*─────────────────────────────────────────────────────────────────────────────*
