@@ -22,7 +22,7 @@ let handler = async (m, { conn, isPrems }) => {
 }
 
 handler.help = ['pescar']
-handler.tags = ['economy']
+handler.tags = ['rpg']
 handler.command = ['pescar', 'fishing']
 handler.group = true;
 
