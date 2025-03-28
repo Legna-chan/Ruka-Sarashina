@@ -4,18 +4,16 @@ import fetch from 'node-fetch'
 import { xpRange } from '../lib/levelling.js'
 
 let tags = {
-  'buscador': '𝙱𝚄𝚂𝚀𝚄𝙴𝙳𝙰𝚂',
-  'fun': '𝙹𝚄𝙴𝙶𝙾𝚂',
-  'rg': '𝚁𝙴𝙶𝙸𝚂𝚃𝚁𝙾', 
-  'sticker': '𝚂𝚃𝙸𝙲𝙺𝙴𝚁𝚂',
-  'anime': '𝙰𝙽𝙸𝙼𝙴𝚂',
+  'anime': 'ᥲᥒіmᥱ', 
+  'descargas': 'ძᥱsᥴᥲrgᥲs',
+  'buscador': 'ᑲᥙsᥴᥲძ᥆rᥱs', 
+  'transformador': 'ᥴ᥆ᥒ᥎ᥱr𝗍іძ᥆rᥱs',
+  'fun': 'ȷᥙᥱg᥆s',
   'grupo': '𝙶𝚁𝚄𝙿𝙾𝚂',
-  'nable': '𝙾𝙽 / 𝙾𝙵𝙵', 
   'nsfw': '𝙽𝚂𝙵𝚆', 
-  'info': '𝙸𝙽𝙵𝙾𝚁𝙼𝙰𝙲𝙸𝙾𝙽',
+  'info': 'іᥒ𝖿᥆-ᑲ᥆𝗍',
   'owner': '𝙲𝚁𝙴𝙰𝙳𝙾𝚁', 
-  'ai': '𝙰𝙸',
-  'transformador': '𝙲𝙾𝙽𝚅𝙴𝚁𝚃𝙸𝙳𝙾𝚁𝙴𝚂',
+  'ai': 'ᥲі',
 }
 
 const defaultMenu = {
@@ -137,7 +135,7 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname }) => {
       readmore: readMore
     }
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
-    
+
 let urls = [
 "https://files.catbox.moe/vs8jca.mp4",
 "https://files.catbox.moe/vs8jca.mp4",
