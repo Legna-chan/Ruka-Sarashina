@@ -58,6 +58,6 @@ let handler = async (m, { conn, args }) => {
 };
 
 handler.help = ['clima *<ciudad/país>*'];
-handler.tags = ['herramientas'];
+handler.tags = ['transformador'];
 handler.command = ['clima', 'tiempo']
 export default handler;
