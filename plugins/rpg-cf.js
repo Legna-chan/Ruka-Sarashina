@@ -37,7 +37,7 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
 };
 
 handler.help = ['cf'];
-handler.tags = ['economy'];
+handler.tags = ['rpg'];
 handler.command = ['cf', 'suerte', 'caracruz'];
 handler.group = true;
 
