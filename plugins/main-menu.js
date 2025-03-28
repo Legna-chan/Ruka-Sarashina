@@ -24,7 +24,7 @@ let handler = async (m, { conn, usedPrefix, __dirname }) => {
     ]
     let randomImage = images[Math.floor(Math.random() * images.length)]  
 
-    let botname = '𝚛𝚞𝚔𝚊 𝚜𝚊𝚛ashina'
+    let botname = '𝚛𝚞𝚔𝚊 𝚜𝚊𝚛𝚊𝚜𝚑𝚒𝚗𝚊'
     let dev = 'Desarrollado por legna'
     let redes = 'https://whatsapp.com/channel/0029VawF8fBBvvsktcInIz3m'
         let totalCommands = Object.values(global.plugins).filter((v) => v.help && v.tags).length;
