@@ -42,7 +42,6 @@ conn.reply(m.chat, texto, m, )
 handler.help = ['speed']
 handler.tags = ['info']
 handler.command = ['speed']
-handler.register = true
 
 export default handler
 
