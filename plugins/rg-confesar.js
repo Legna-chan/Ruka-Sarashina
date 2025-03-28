@@ -54,7 +54,7 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
     }
 }
 
-handler.tags = ['rg'];
+handler.tags = ['perfil'];
 handler.help = ['confesar'].map(v => v + ' <número mensaje>');
 handler.command = ['confesar', 'confesiones']
 handler.register = true;
