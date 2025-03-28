@@ -51,7 +51,7 @@ global.etiqueta = 'Legna'
 
 global.moneda = 'YamiCoins'
 global.catalogo = './src/catálogo.png';
-global.banner = 'https://files.catbox.moe/za90d7.mp4'
+global.banner = 'https://files.catbox.moe/kxdggo.jpg'
 //*─────────────────────────────────────────────────────────────────────────────*
 
 global.gp1 = 'https://chat.whatsapp.com/Ecz881bBgqPIWjDOaKkp7E'
