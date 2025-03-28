@@ -69,7 +69,7 @@ ${x[2]} : ${y[2]} : ${z[2]}
 };
 
 handler.help = ['slot <apuesta>'];
-handler.tags = ['economy'];
+handler.tags = ['rpg'];
 handler.group = true;
 handler.command = ['slot'];
 export default handler;

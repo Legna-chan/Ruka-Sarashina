@@ -58,19 +58,19 @@ global.done = '✅'
 global.error = '✖️'
 global.msm = '⚠︎'
 
-//Emojis determinado de Konjiki No Yami
+//Emojis determinado de Ruka Sarashina
 global.emoji = '🎋'
-global.emoji2 = '🍭'
-global.emoji3 = '🎋'
-global.emoji4 = '❍'
-global.emoji5 = '✰'
+global.emoji2 = '💙'
+global.emoji3 = '🍡'
+global.emoji4 = '🍃'
+global.emoji5 = '🍭'
 global.emojis = [emoji, emoji2, emoji3, emoji4].getRandom()
 
 //mensaje en espera
-global.wait = '❍ Espera un momento, soy lenta...';
-global.waitt = '❍ Espera un momento, soy lenta...';
-global.waittt = '❍ Espera un momento, soy lenta...';
-global.waitttt = '❍ Espera un momento, soy lenta...';
+global.wait = '🌸 Espera un momento, soy lenta...';
+global.waitt = '🌸 Espera un momento, soy lenta...';
+global.waittt = '🌸 Espera un momento, soy lenta...';
+global.waitttt = '🌸 Espera un momento, soy lenta...';
 
 //Enlaces
 var canal = 'https://whatsapp.com/channel/0029VapSIvR5EjxsD1B7hU3T'  

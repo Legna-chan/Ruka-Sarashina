@@ -15,7 +15,7 @@ user.coin += rsl
 }
 
 handler.help = ['trabajar']
-handler.tags = ['economy']
+handler.tags = ['rpg']
 handler.command = ['w','work','chambear','chamba', 'trabajar']
 handler.group = true;
 

@@ -1,16 +1,39 @@
-import moment from 'moment-timezone';
+//créditos a @deylin por el codigo
 
-let handler = async (m, { conn, args }) => {
-    let userId = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.sender;
-    let user = global.db.data.users[userId];
-    let name = conn.getName(userId);
-    let _uptime = process.uptime() * 1000;
-    let uptime = clockString(_uptime);
-    let totalreg = Object.keys(global.db.data.users).length;
-    let totalCommands = Object.values(global.plugins).filter((v) => v.help && v.tags).length;
+import fs from 'fs'
+import fetch from 'node-fetch'
+import { xpRange } from '../lib/levelling.js'
 
-    let txt = `
+let handler = async (m, { conn, usedPrefix, __dirname }) => {
+  try {
+    let userId = m.sender
+    let { exp, dragones, level, role } = global.db.data.users[userId] || { exp: 0, dragones: 0, level: 0, role: 'Sin rango' }
+    let { min, xp, max } = xpRange(level, global.multiplier || 1)
+    let name = await conn.getName(userId)
+
+    let _uptime = process.uptime() * 1000
+    let uptime = clockString(_uptime)
+    let totalreg = Object.keys(global.db.data.users).length
+    let perfil = await conn.profilePictureUrl(userId, 'image').catch(_ => 'https://files.catbox.moe/qx71n6.jpg')
+    let taguser = '@' + userId.split("@s.whatsapp.net")[0]
+
+    let images = [
+      'https://files.catbox.moe/cw2zes.jpg',
+      'https://files.catbox.moe/f4hnw4.jpg',
+      'https://files.catbox.moe/qx71n6.jpg'
+    ]
+    let randomImage = images[Math.floor(Math.random() * images.length)]  
+
+    let botname = 'rᥙkᥲ sᥲrᥲsһіᥒᥲ'
+    let dev = 'Desarrollado por legna'
+    let emojis = '🌸'
+    let error = '❌'
+
+    let menu = `
+*꒷꒦꒷꒷꒦꒷꒦꒷꒷꒦꒷꒦꒷꒦꒷꒷꒦꒷꒷꒦꒷꒷꒦꒷꒦꒷꒦꒷꒦꒷*
+
 *!𝙷𝚘𝚕𝚊! 𝚎𝚜𝚝𝚎 𝚎𝚜 𝚎𝚕 𝚖𝚎𝚗𝚞 𝚍𝚎 ${botname}*
+
 ╭──❀•°❀°•❀──╮  
 ┃ ✐ Cliente ➩ @${userId.split('@')[0]}  
 ┃ ❀ Editor ➩ @Legna 
@@ -32,6 +55,8 @@ let handler = async (m, { conn, args }) => {
 > ➮ Crea una sesión de Sub-Bot
 ✤ *#bots • #sockets*
 > ➮ Ver la lista de Sub-Bots activos.
+✤ *#status • #estado*
+> ➮ Ver el estado actual de la Bot.
 ✤ *#infobot • #infobot*
 > ➮ Ver la información completa de la Bot.
 ✤ *#p • #ping*
@@ -469,39 +494,45 @@ let handler = async (m, { conn, args }) => {
 > ✦ Crea una sala de juego. 
   `.trim();
 
-  await conn.sendMessage(m.chat, { 
-      text: txt,
-      contextInfo: {
-          mentionedJid: [m.sender, userId],
-          isForwarded: false,
-          forwardedNewsletterMessageInfo: {
-              newsletterJid: channelRD.id,
-              newsletterName: channelRD.name,
-              serverMessageId: -1,
-          },
-          forwardingScore: 999,
-          externalAdReply: {
-              title: botname,
-              body: textbot,
-              thumbnail: catalogo,
-              mediaType: 1,
-              showAdAttribution: true,
-              renderLargerThumbnail: true,
-          },
-      },
-  }, { quoted: m });
+    await conn.sendMessage(m.chat, {
+      image: { url: randomImage },
+      caption: menu,
+      contextInfo: { 
+        mentionedJid: [m.sender], 
+        isForwarded: true, 
+        forwardedNewsletterMessageInfo: { 
+          newsletterJid: 'channel@example.com', 
+          newsletterName: 'Canal Oficial', 
+          serverMessageId: -1, 
+        }, 
+        forwardingScore: 999, 
+        externalAdReply: { 
+          title: botname, 
+          body: dev, 
+          thumbnailUrl: banner, 
+          sourceUrl: redes, 
+          mediaType: 1, 
+          renderLargerThumbnail: false 
+        }
+      }
+    })
 
-};
+    await m.react(emojis)    
 
-handler.help = ['menu'];
-handler.tags = ['main'];
-handler.command = ['menu', 'ayuda', 'help'];
+  } catch (e) {
+    await m.reply(`✘ Ocurrió un error al enviar el menú\n\n${e}`)
+    await m.react(error)
+  }
+}
 
-export default handler;
+handler.help = ['menu']
+handler.tags = ['main']
+handler.command = ['menu', 'help', 'menú', 'allmenú', 'allmenu', 'menucompleto']
+export default handler
 
 function clockString(ms) {
-    let seconds = Math.floor((ms / 1000) % 60);
-    let minutes = Math.floor((ms / (1000 * 60)) % 60);
-    let hours = Math.floor((ms / (1000 * 60 * 60)) % 24);
-    return `${hours}h ${minutes}m ${seconds}s`;
+  let h = Math.floor(ms / 3600000)
+  let m = Math.floor(ms / 60000) % 60
+  let s = Math.floor(ms / 1000) % 60
+  return [h, m, s].map(v => v.toString().padStart(2, '0')).join(':')
 }

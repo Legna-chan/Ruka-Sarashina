@@ -49,7 +49,7 @@ break
 }
 global.db.write()}
 
-handler.tags = ['economy']
+handler.tags = ['rpg']
 handler.help = ['crimen']
 handler.command = ['crimen', 'crime']
 handler.group = true

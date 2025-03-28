@@ -35,7 +35,7 @@ conn.reply(m.chat, `${emoji2} \`Veamos que numeros tienen!\`\n\n`+ `➠ *${botna
 } else conn.reply(m.chat, `No tienes *${formatNumber(count)} 💸 ${moneda}* para apostar!`.trim(), m)}
 
 handler.help = ['apostar *<cantidad>*']
-handler.tags = ['economy']
+handler.tags = ['rpg']
 handler.command = ['apostar','casino']
 handler.group = true;
 handler.fail = null

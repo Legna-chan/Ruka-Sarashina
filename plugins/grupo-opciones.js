@@ -64,7 +64,7 @@ renderLargerThumbnail: true
 }, { quoted: m });
 };
 
-handler.help = ['configuraciongrupo'];
+handler.help = ['config'];
 handler.tags = ['grupo'];
 handler.command = ['config', 'opciones', 'nable'];
 handler.group = true;

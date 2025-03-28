@@ -44,7 +44,7 @@ user.lastmiming = new Date() * 1;
 }
 
 handler.help = ['minar'];
-handler.tags = ['economy'];
+handler.tags = ['rpg'];
 handler.command = ['minar', 'miming', 'mine'];
 handler.group = true;
 

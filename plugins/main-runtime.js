@@ -6,7 +6,7 @@ let runtime = `${packname}
 conn.reply(m.chat, runtime, m)
 }
 handler.help = ['runtime']
-handler.tags = ['main']
+handler.tags = ['info']
 handler.command = ['runtime', 'uptime']
 
 export default handler

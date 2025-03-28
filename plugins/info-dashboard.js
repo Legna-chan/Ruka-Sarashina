@@ -13,7 +13,7 @@ let handler = async (m, { conn, command }) => {
             return `⬡ *Comando* : *${name}*\n⬡ *Usos* : ${total}`
         }).join('\n\n')
 
-        conn.reply(m.chat, handlers, m, fake)
+        conn.reply(m.chat, handlers, m, m)
     }
 
     if (command == 'database' || command == 'usuarios' || command == 'user') {
@@ -31,6 +31,5 @@ let handler = async (m, { conn, command }) => {
 handler.help = ['dash', 'dashboard', 'views', 'database', 'usuarios', 'user']
 handler.tags = ['info']
 handler.command = ['dashboard', 'dash', 'views', 'database', 'usuarios', 'user']
-handler.register = true
 
 export default handler

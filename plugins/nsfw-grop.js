@@ -47,7 +47,7 @@ if (!db.data.chats[m.chat].nsfw && m.isGroup) {
 }
 
 handler.help = ['grop/manosear @tag'];
-handler.tags = ['emox'];
+handler.tags = ['anime'];
 handler.command = ['grop', 'grope', 'manosear'];
 handler.group = true;
 
