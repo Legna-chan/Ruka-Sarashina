@@ -4,17 +4,17 @@ import fetch from 'node-fetch'
 import { xpRange } from '../lib/levelling.js'
 
 let tags = {
-  'anime': 'ᥲᥒіmᥱ', 
-  'descargas': 'ძᥱsᥴᥲrgᥲs',
+  'info': 'іᥒ𝖿᥆-ᑲ᥆𝗍', 
   'buscador': 'ᑲᥙsᥴᥲძ᥆rᥱs', 
-  'transformador': 'ᥴ᥆ᥒ᥎ᥱr𝗍іძ᥆rᥱs',
-  'fun': 'ȷᥙᥱg᥆s',
-  'grupo': '𝙶𝚁𝚄𝙿𝙾𝚂',
-  'nsfw': '𝙽𝚂𝙵𝚆', 
-  'info': 'іᥒ𝖿᥆-ᑲ᥆𝗍',
-  'owner': '𝙲𝚁𝙴𝙰𝙳𝙾𝚁', 
-  'ai': 'ᥲі',
+  'buscador': 'ᑲᥙsᥴᥲძ᥆rᥱs', 
+  'descargas': 'ძᥱsᥴᥲrgᥲs',
+  'economia': 'ᥱᥴ᥆ᥒ᥆mіᥲ',
+  'sticker': 's𝗍іᥴkᥱrs',
   'perfil': '⍴ᥱr𝖿іᥣ', 
+  'grupo': 'grᥙ⍴᥆s',
+  'anime': 'ᥲᥒіmᥱ', 
+  'nsfw': 'ᥒs𝖿ᥕ',
+  'fun': 'ȷᥙᥱg᥆s', 
 }
 
 const defaultMenu = {
