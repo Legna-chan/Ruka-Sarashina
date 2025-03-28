@@ -12,13 +12,13 @@ let handler = async (m, { conn, usedPrefix, __dirname }) => {
     let _uptime = process.uptime() * 1000
     let uptime = clockString(_uptime)
     let totalreg = Object.keys(global.db.data.users).length
-    let perfil = await conn.profilePictureUrl(userId, 'image').catch(_ => 'https://files.catbox.moe/56t2l6.jpg')
+    let perfil = await conn.profilePictureUrl(userId, 'image').catch(_ => 'https://files.catbox.moe/qx71n6.jpg')
     let taguser = '@' + userId.split("@s.whatsapp.net")[0]
 
     let images = [
-      'https://files.catbox.moe/56t2l6.jpg',
-      'https://files.catbox.moe/56t2l6.jpg',
-      'https://files.catbox.moe/56t2l6.jpg'
+      'https://files.catbox.moe/kxdggo.jpg',
+      'https://files.catbox.moe/qx71n6.jpg',
+      'https://files.catbox.moe/kxdggo.jpg'
     ]
     let randomImage = images[Math.floor(Math.random() * images.length)]  
 
