@@ -35,7 +35,7 @@ global.nameqr = 'Ruka-chan'
 global.namebot = 'Ruka sarashina'
 global.sessions = 'Sessions'
 global.jadi = 'JadiBots' 
-global.yamiJadibts = true
+global.rukaJadibts = true
 
 //*─────────────────────────────────────────────────────────────────────────────*
 
