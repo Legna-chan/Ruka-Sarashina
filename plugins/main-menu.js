@@ -24,7 +24,7 @@ let handler = async (m, { conn, usedPrefix, __dirname }) => {
     ]
     let randomImage = images[Math.floor(Math.random() * images.length)]  
 
-    let botname = '𝚛𝚞𝚔𝚊 𝚜𝚊𝚛𝚊𝚜𝚑𝚒𝚗𝚊'
+    let botname = 'rᥙkᥲ sᥲrᥲsһіᥒᥲ'
     let dev = 'Desarrollado por legna'
     let emojis = '✅'
     let error = '❌'
