@@ -32,7 +32,7 @@ let handler = async (m, { conn, args, command, usedPrefix }) => {
   }
 };
 
-handler.tags = ['+18']; 
+handler.tags = ['nsfw']; 
 handler.help = ['pornhubsearch']; 
 handler.command = ['phsearch', 'pornhubsearch'];
 export default handler;
