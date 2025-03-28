@@ -57,8 +57,6 @@ let handler = async (m, { conn, usedPrefix, __dirname }) => {
 > ➮ Ver la lista de Sub-Bots activos.
 ✤ *#status • #estado*
 > ➮ Ver el estado actual de la Bot.
-✤ *#links • #grupos*
-> ➮ Ver los enlaces oficiales de la Bot.
 ✤ *#infobot • #infobot*
 > ➮ Ver la información completa de la Bot.
 ✤ *#p • #ping*
