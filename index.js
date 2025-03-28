@@ -41,15 +41,15 @@ const PORT = process.env.PORT || process.env.SERVER_PORT || 3000
 //let require = createRequire(megu)
 let { say } = cfonts
 
-console.log(chalk.bold.redBright(`\n✰ Iniciando Konjiki No Yami ✰\n`))
+console.log(chalk.bold.redBright(`\n✰ Iniciando Ruka Sarashina ✰\n`))
 
-say('Konjiki No Yami', {
+say('Ruka Sarashina', {
 font: 'block',
 align: 'center',
 colors: ['magentaBright']
 })
 
-say(`Developed By • Legna`, {
+say(`Editor By • Legna`, {
 font: 'console',
 align: 'center',
 colors: ['blueBright']
