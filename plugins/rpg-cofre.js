@@ -48,7 +48,7 @@ const handler = async (m, { isPrems, conn }) => {
 handler.help = ['cofre'];
 handler.tags = ['rpg'];
 handler.command = ['cofre'];
-handler.level = 5;
+handler.level = 10;
 handler.group = true;
 
 export default handler;
