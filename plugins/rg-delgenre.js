@@ -12,6 +12,6 @@ return conn.reply(m.chat, `${emoji} Se ha eliminado tu genero.`, m)
 };
 
 handler.help = ['delgenre']
-handler.tags = ['rg']
+handler.tags = ['perfil']
 handler.command = ['delgenero', 'delgenre']
 export default handler;
