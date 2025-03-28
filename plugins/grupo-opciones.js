@@ -55,8 +55,7 @@ text: text,
 contextInfo: {
 externalAdReply: {
 title: packname,
-body: dev,
-thumbnailUrl: global.banner,
+body: dev,thumbnail: catalogo,
 mediaType: 1,
 showAdAttribution: true,
 renderLargerThumbnail: true

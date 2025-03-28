@@ -421,8 +421,6 @@ let handler = async (m, { conn, args }) => {
 > ✦ La bot te cuenta un chiste.
 ᰔᩚ *#consejo* 
 > ✦ La bot te da un consejo. 
-ᰔᩚ *#doxeo • #doxear* + <mencion>
-> ✦ Simular un doxeo falso.
 ᰔᩚ *#facto*
 > ✦ La bot te lanza un facto. 
 ᰔᩚ *#formarpareja*
@@ -445,10 +443,6 @@ let handler = async (m, { conn, args }) => {
 > ✦ Calcular el iq de alguna persona. 
 ᰔᩚ *#meme*
 > ✦ La bot te envía un meme aleatorio. 
-ᰔᩚ *#morse*
-> ✦ Convierte un texto a codigo morse. 
-ᰔᩚ *#nombreninja*
-> ✦ Busca un nombre ninja aleatorio. 
 ᰔᩚ *#paja • #pajeame* 
 > ✦ La bot te hace una paja.
 ᰔᩚ *#personalidad* + <mencion>
@@ -466,9 +460,7 @@ let handler = async (m, { conn, args }) => {
 ᰔᩚ *#formartrio* + <mencion>
 > ✦ Forma un trio.
 ᰔᩚ *#ahorcado*
-> ✦ Diviertete con la bot jugando el juego ahorcado.
-ᰔᩚ *#genio*
-> ✦ Comienza una pregunta con el genio.
+> ✦ Diviertete con la bot jugando el juego del ahorcado.
 ᰔᩚ *#mates • #matematicas*
 > ✦ Responde las preguntas de matemáticas para ganar recompensas.
 ᰔᩚ *#ppt*

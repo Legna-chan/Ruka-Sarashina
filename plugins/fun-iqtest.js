@@ -5,7 +5,6 @@ handler.help = ['iqtest']
 handler.tags = ['fun']
 handler.command = ['iqtest', 'iq']
 handler.group = true
-handler.register = true
 handler.fail = null
 
 export default handler 

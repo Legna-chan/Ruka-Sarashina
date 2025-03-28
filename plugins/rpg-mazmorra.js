@@ -44,7 +44,7 @@ let handler = async (m, { conn, usedPrefix, command }) => {
     users[senderId].exp += evento.exp;
   }
 
-  let img = 'https://qu.ax/jbnNz.jpg';
+  let img = 'https://files.catbox.moe/119s5y.jpg';
   let info = `╭━〔 Mazmoras Antiguas 〕\n` +
              `┃Misión: *${evento.nombre}*\n` +
              `┃Evento: ${evento.mensaje}\n` +
@@ -61,6 +61,7 @@ handler.tags = ['rpg'];
 handler.help = ['explorar'];
 handler.command = ['dungeon', 'mazmorra', 'cueva'];
 handler.group = true;
+handler.level = 20;
 
 export default handler;
 
