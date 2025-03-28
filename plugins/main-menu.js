@@ -527,7 +527,7 @@ let handler = async (m, { conn, usedPrefix, __dirname }) => {
 
 handler.help = ['menu']
 handler.tags = ['main']
-handler.command = ['menu', 'help', 'menú', 'allmenú', 'allmenu', 'menucompleto']
+handler.command = ['menu', 'help', 'menú', 'allmenú', 'ayuda', 'menucompleto']
 export default handler
 
 function clockString(ms) {
