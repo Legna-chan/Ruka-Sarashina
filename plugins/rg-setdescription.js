@@ -17,6 +17,6 @@ return conn.reply(m.chat, `${emoji} Se ha establecido tu descripcion.\n\n> *${us
 };
 
 handler.help = ['setdescription']
-handler.tags = ['rg']
+handler.tags = ['perfil']
 handler.command = ['setdescription', 'setdesc']
 export default handler;
