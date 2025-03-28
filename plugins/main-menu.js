@@ -1,3 +1,5 @@
+//créditos a @deylin por el codigo
+
 import fs from 'fs'
 import fetch from 'node-fetch'
 import { xpRange } from '../lib/levelling.js'
@@ -22,8 +24,8 @@ let handler = async (m, { conn, usedPrefix, __dirname }) => {
     ]
     let randomImage = images[Math.floor(Math.random() * images.length)]  
 
-    let botname = '𝐊𝐢𝐫𝐢𝐭𝐨 - 𝐁𝐨𝐭 𝐌𝐃'
-    let dev = 'Desarrollador: Deylin'
+    let botname = '*𝚛𝚞𝚔𝚊 𝚜𝚊𝚛ashina'
+    let dev = 'Desarrollado por legna'
     let redes = 'https://whatsapp.com/channel/0029VawF8fBBvvsktcInIz3m'
         let totalCommands = Object.values(global.plugins).filter((v) => v.help && v.tags).length;
     let emojis = '✅'
