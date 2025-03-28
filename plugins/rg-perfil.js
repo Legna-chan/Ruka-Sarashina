@@ -59,7 +59,7 @@ ${description}
 };
 
 handler.help = ['profile'];
-handler.tags = ['rg'];
+handler.tags = ['perfil'];
 handler.command = ['profile', 'perfil'];
 
 export default handler;
