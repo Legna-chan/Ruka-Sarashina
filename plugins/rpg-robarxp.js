@@ -25,7 +25,7 @@ return;
   global.db.data.users[m.sender].lastrob = new Date * 1;
 };
 handler.help = ['rob'];
-handler.tags = ['economy'];
+handler.tags = ['rpg'];
 handler.command = ['robxp', 'robarxp'];
 handler.group = true;
 
