@@ -38,8 +38,7 @@ let handler = async (m, { conn, usedPrefix, __dirname }) => {
 ┃ ✐ Cliente ➩ @${userId.split('@')[0]}  
 ┃ ❀ Editor ➩ @Legna 
 ┃ ✦ Bot ➩ ${(conn.user.jid == global.conn.user.jid ? 'Principal 🅥' : 'Sub-bot 🆂')}  
-┃ ⴵ Activa ➩ ${uptime}  
-┃ ✰ Usuarios ➩ ${totalreg}  
+┃ ⴵ Activa ➩ ${uptime}    
 ┃ ❏ Versión ➩ 1.0.0  
 ╰──❀•°❀°•❀──╯
 
