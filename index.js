@@ -11,7 +11,7 @@ import fs, {readdirSync, statSync, unlinkSync, existsSync, mkdirSync, readFileSy
 import yargs from 'yargs';
 import {spawn} from 'child_process'
 import lodash from 'lodash'
-import { yamiJadiBot } from './plugins/jadibot-serbot.js';
+import { rukaJadiBot } from './plugins/jadibot-serbot.js';
 import chalk from 'chalk'
 import syntaxerror from 'syntax-error'
 import {tmpdir} from 'os'
@@ -41,15 +41,15 @@ const PORT = process.env.PORT || process.env.SERVER_PORT || 3000
 //let require = createRequire(megu)
 let { say } = cfonts
 
-console.log(chalk.bold.redBright(`\n✰ Iniciando Konjiki No Yami ✰\n`))
+console.log(chalk.bold.redBright(`\n✰ Iniciando Ruka Sarashina ✰\n`))
 
-say('Konjiki No Yami', {
+say('Ruka Sarashina', {
 font: 'block',
 align: 'center',
 colors: ['magentaBright']
 })
 
-say(`Developed By • Legna`, {
+say(`Editor By • Legna`, {
 font: 'console',
 align: 'center',
 colors: ['blueBright']
@@ -212,7 +212,7 @@ if (opcion == '1' || methodCodeQR) {
 console.log(chalk.bold.yellow(`\n❐ ESCANEA EL CÓDIGO QR EXPIRA EN 45 SEGUNDOS`))}
 }
 if (connection == 'open') {
-console.log(chalk.bold.green('\n❀ YamiBot-MD Conectada con éxito ❀'))
+console.log(chalk.bold.green('\n❀ Ruka Sarashina Conectada con éxito ❀'))
 }
 let reason = new Boom(lastDisconnect?.error)?.output?.statusCode
 if (connection === 'close') {

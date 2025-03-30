@@ -18,16 +18,16 @@
 "eslint": "eslint .",
 "eslintfix": "eslint --fix ."
 },
-"homepage": "https://github.com/Legna-chan/Konjiki-No-Yami",
+"homepage": "https://github.com/Legna-chan/Ruka-Sarashina",
 "author": {
 "name": "Legna"
 },
 "repository": {
 "type": "git",
-"url": "git+https://github.com/Legna-chan/Konjiki-No-Yami.git"
+"url": "git+https://github.com/Legna-chan/Ruka-Sarashina.git"
 },
 "bugs": {
-"url": "https://github.com/Legna-chan/Konjiki-No-Yami/issues"
+"url": "https://github.com/Legna-chan/Ruka-Sarashina/issues"
 },
 "license": "GPL-3.0-or-later",
 "dependencies": {
