@@ -1,140 +1,129 @@
-//créditos a @deylin por el codigo
+import moment from 'moment-timezone';
 
-import fs from 'fs'
-import fetch from 'node-fetch'
-import { xpRange } from '../lib/levelling.js'
-
-let handler = async (m, { conn, usedPrefix, __dirname }) => {
-  try {
-    let userId = m.sender
-    let { exp, dragones, level, role } = global.db.data.users[userId] || { exp: 0, dragones: 0, level: 0, role: 'Sin rango' }
-    let { min, xp, max } = xpRange(level, global.multiplier || 1)
-    let name = await conn.getName(userId)
-
-    let _uptime = process.uptime() * 1000
-    let uptime = clockString(_uptime)
-    let totalreg = Object.keys(global.db.data.users).length
-    let perfil = await conn.profilePictureUrl(userId, 'image').catch(_ => 'https://files.catbox.moe/qx71n6.jpg')
-    let taguser = '@' + userId.split("@s.whatsapp.net")[0]
-
-    let images = [
-      'https://files.catbox.moe/cw2zes.jpg',
-      'https://files.catbox.moe/f4hnw4.jpg',
-      'https://files.catbox.moe/qx71n6.jpg'
-    ]
-    let randomImage = images[Math.floor(Math.random() * images.length)]  
-
-    let botname = 'rᥙkᥲ sᥲrᥲsһіᥒᥲ'
-    let dev = 'Desarrollado por legna'
-    let emojis = '🌸'
-    let error = '❌'
-
-    let menu = `
-*꒷꒦꒷꒷꒦꒷꒦꒷꒷꒦꒷꒦꒷꒦꒷꒷꒦꒷꒷꒦꒷꒷꒦꒷꒦꒷꒦꒷꒦꒷*
-
+let handler = async (m, { conn, args }) => {
+    let userId = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.sender;
+    let user = global.db.data.users[userId];
+    let name = conn.getName(userId);
+    let _uptime = process.uptime() * 1000;
+    let uptime = clockString(_uptime);
+    let totalreg = Object.keys(global.db.data.users).length;
+    let totalCommands = Object.values(global.plugins).filter((v) => v.help && v.tags).length;
+ 
+    let txt = `
 *!𝙷𝚘𝚕𝚊! 𝚎𝚜𝚝𝚎 𝚎𝚜 𝚎𝚕 𝚖𝚎𝚗𝚞 𝚍𝚎 ${botname}*
+╭┈ ↷
+│✐ Cliente ➩ @${userId.split('@')[0]}
+│❀ Modo ➩ Publica
+│✦ Bot ➩ ${(conn.user.jid == global.conn.user.jid ? 'Principal 🅥' : 'Sub-bot 🆂')}
+│ⴵ Activa ➩ ${uptime}
+│✰ Usuarios ➩ ${totalreg}
+│❏ version ➩ 1.0.0
+╰─────────────────
 
-╭──❀•°❀°•❀──╮  
-┃ ✐ Cliente ➩ @${userId.split('@')[0]}  
-┃ ❀ Editor ➩ @Legna 
-┃ ✦ Bot ➩ ${(conn.user.jid == global.conn.user.jid ? 'Principal 🅥' : 'Sub-bot 🆂')}  
-┃ ⴵ Activa ➩ ${uptime}  
-┃ ✰ Usuarios ➩ ${totalreg}  
-┃ ❏ Versión ➩ 1.0.0  
-╰──❀•°❀°•❀──╯
-
-🍃  •/• \`Info-Bot\` •/•
+• :･ﾟ⊹˚• \`『 Info-Bot 』\` •˚⊹:･ﾟ•
 
 ☄︎ ᥴ᥆mᥲᥒძ᥆s ⍴ᥲrᥲ ᥎ᥱr ᥱs𝗍ᥲძ᥆ ᥱ іᥒ𝖿᥆rmᥲᥴі᥆́ᥒ ძᥱ ᥣᥲ ᑲ᥆𝗍. 
 
-✤ *#help • #menu*
-> ➮ Ver la lista de comandos de la Bot.
-✤ *#uptime • #runtime*
-> ➮ Ver tiempo activo o en linea de la bot. 
-✤ *#qr • #code*
-> ➮ Crea una sesión de Sub-Bot
-✤ *#bots • #sockets*
-> ➮ Ver la lista de Sub-Bots activos.
-✤ *#status • #estado*
-> ➮ Ver el estado actual de la Bot.
-✤ *#infobot • #infobot*
-> ➮ Ver la información completa de la Bot.
-✤ *#p • #ping*
-> ➮ Ver la velocidad de respuesta del Bot.
-✤ *#reporte • #reportar*
-> ➮ Reporta alguna falla o problema de la Bot.
-✤ *#sistema • #system*
-> ➮ Ver estado del sistema de alojamiento.
-✤ *#speed • #speedtest*
-> ➮ Ver las estadísticas de velocidad de la Bot.
-✤ *#views • #usuarios*
-> ➮ Ver la cantidad de usuarios registrados en el sistema.
-✤ *#ds • #fixmsgespera*
-> ➮ Eliminar archivos de sesión innecesarios.
-✤ *#editautoresponder*
-> ➮ Configurar un Prompt personalizado de la Bot.
+ᰔᩚ *#help • #menu*
+> ✦ Ver la lista de comandos de la Bot.
+ᰔᩚ *#uptime • #runtime*
+> ✦ Ver tiempo activo o en linea de la Bot.
+ᰔᩚ *#serbot • #serbot code*
+> ✦ Crea una sesión de Sub-Bot.
+ᰔᩚ *#bots • #sockets*
+> ✦ Ver la lista de Sub-Bots activos.
+ᰔᩚ *#links • #grupos*
+> ✦ Ver los enlaces oficiales de la Bot.
+ᰔᩚ *#infobot • #infobot*
+> ✦ Ver la información completa de la Bot.
+ᰔᩚ *#p • #ping*
+> ✦ Ver la velocidad de respuesta del Bot.
+ᰔᩚ *#reporte • #reportar*
+> ✦ Reporta alguna falla o problema de la Bot.
+ᰔᩚ *#sistema • #system*
+> ✦ Ver estado del sistema de alojamiento.
+ᰔᩚ *#speed • #speedtest*
+> ✦ Ver las estadísticas de velocidad de la Bot.
+ᰔᩚ *#views • #usuarios*
+> ✦ Ver la cantidad de usuarios registrados en el sistema.
+ᰔᩚ *#ds • #fixmsgespera*
+> ✦ Eliminar archivos de sesión innecesarios.
+ᰔᩚ *#editautoresponder*
+> ✦ Configurar un Prompt personalizado de la Bot.
 
-🍃  •/• \`Buscadores\` •/•
+• :･ﾟ⊹˚• \`『 Buscadores 』\` •˚⊹:･ﾟ•
 
 ☄︎ ᥴ᥆mᥲᥒძ᥆s ⍴ᥲrᥲ rᥱᥲᥣіzᥲr ᑲᥙ́s𝗊ᥙᥱძᥲs ᥱᥒ ძіs𝗍іᥒ𝗍ᥲs ⍴ᥣᥲ𝗍ᥲ𝖿᥆rmᥲs. 
 
-✤ *#tiktoksearch • #tiktoks*
-> ➮ Buscador de videos de tiktok.
-✤ *#tweetposts*
-> ➮ Buscador de posts de Twitter/X.
-✤ *#ytsearch • #yts*
-> ➮ Realiza búsquedas de Youtube.
-✤ *#google*
-> ➮ Realiza búsquedas por Google.
-✤ *#imagen • #image*
-> ➮ buscador de imagenes de Google.
-✤ *#animesearch • #animess*
-> ➮ Buscador de animes de tioanime.
-✤ *#animei • #animeinfo*
-> ➮ Buscador de capítulos de #animesearch.
-✤ *#infoanime*
-> ➮ Buscador de información de anime/manga.
-✤ *#hentaisearch • #searchhentai*
-> ➮ Buscador de capítulos hentai.
-✤ #xnxxsearch • #xnxxs*
-> ➮ Buscador de vídeos de Xnxx.
-✤ *#xvsearch • #xvideossearch*
-> ➮ Buscador de vídeos de Xvideos.
-✤ *#pornhubsearch • #phsearch*
-> ➮ Buscador de videos de Pornhub.
-✤ *#npmjs*
-> ➮ Buscandor de npmjs.
+ᰔᩚ *#tiktoksearch • #tiktoks*
+> ✦ Buscador de videos de tiktok.
+ᰔᩚ *#tweetposts*
+> ✦ Buscador de posts de Twitter/X.
+ᰔᩚ *#ytsearch • #yts*
+> ✦ Realiza búsquedas de Youtube.
+ᰔᩚ *#githubsearch*
+> ✦ Buscador de usuarios de GitHub.
+ᰔᩚ *#google*
+> ✦ Realiza búsquedas por Google.
+ᰔᩚ *#pin • #pinterest*
+> ✦ Buscador de imagenes de Pinterest.
+ᰔᩚ *#imagen • #image*
+> ✦ buscador de imagenes de Google.
+ᰔᩚ *#animesearch • #animess*
+> ✦ Buscador de animes de tioanime.
+ᰔᩚ *#animei • #animeinfo*
+> ✦ Buscador de capítulos de #animesearch.
+ᰔᩚ *#infoanime*
+> ✦ Buscador de información de anime/manga.
+ᰔᩚ *#hentaisearch • #searchhentai*
+> ✦ Buscador de capítulos hentai.
+ᰔᩚ #xnxxsearch • #xnxxs*
+> ✦ Buscador de vídeos de Xnxx.
+ᰔᩚ *#xvsearch • #xvideossearch*
+> ✦ Buscador de vídeos de Xvideos.
+ᰔᩚ *#pornhubsearch • #phsearch*
+> ✦ Buscador de videos de Pornhub.
+ᰔᩚ *#npmjs*
+> ✦ Buscandor de npmjs.
 
-🍃  •/• \`Descargas\` •/•
+• :･ﾟ⊹˚• \`『 Descargas 』\` •˚⊹:･ﾟ•
 
 ☄︎ ᥴ᥆mᥲᥒძ᥆s ძᥱ ძᥱsᥴᥲrgᥲs ⍴ᥲrᥲ ᥎ᥲrі᥆s ᥲrᥴһі᥎᥆s. 
 .
-✤ *#tiktok • #tt*
-> ➮ Descarga videos de TikTok. 
-✤ *#play • #play2*
-> ➮ Descarga música/video de YouTube.
-✤ *#ytmp3 • #ytmp4*
-> ➮ Descarga música/video de YouTube mediante url.
-✤ *#fb • #facebook*
-> ➮ Descarga videos de Facebook.
-✤ *#twitter • #x* + [Link]
-> ➮ Descargar un video de Twitter/X
-✤ *#ig • #instagram*
-> ➮ Descarga contenido de Instagram.
-✤ *#tts • #tiktoks* + [busqueda]
-> ➮ Buscar videos de tiktok 
-✤ *#xvideosdl*
-> ➮ Descarga videos porno de (Xvideos). 
-✤ *#xnxxdl*
-> ➮ Descarga videos porno de (xnxx).
-✤ *#tiktokrandom • #ttrandom*
-> ➮ Descarga un video aleatorio de tiktok.
-✤ *#npmdl • #npmdownloader*
-> ➮ Descarga paquetes de NPMJs.
-✤ *#animelinks • #animedl*
-> ➮ Descarga Links disponibles de descargas.
+ᰔᩚ *#tiktok • #tt*
+> ✦ Descarga videos de TikTok.
+ᰔᩚ *#mediafire • #mf*
+> ✦ Descargar un archivo de MediaFire.
+ᰔᩚ *#pinvid • #pinvideo* + [enlacé]
+> ✦ Descargar vídeos de Pinterest. 
+ᰔᩚ *#mega • #mg* + [enlacé]
+> ✦ Descargar un archivo de MEGA.
+ᰔᩚ *#play • #play2*
+> ✦ Descarga música/video de YouTube.
+ᰔᩚ *#ytmp3 • #ytmp4*
+> ✦ Descarga música/video de YouTube mediante url.
+ᰔᩚ *#fb • #facebook*
+> ✦ Descarga videos de Facebook.
+ᰔᩚ *#twitter • #x* + [Link]
+> ✦ Descargar un video de Twitter/X
+ᰔᩚ *#ig • #instagram*
+> ✦ Descarga contenido de Instagram.
+ᰔᩚ *#tts • #tiktoks* + [busqueda]
+> ✦ Buscar videos de tiktok 
+ᰔᩚ *#gitclone* + <url> 
+> ✦ Descarga un repositorio de github.
+ᰔᩚ *#xvideosdl*
+> ✦ Descarga videos porno de (Xvideos). 
+ᰔᩚ *#xnxxdl*
+> ✦ Descarga videos porno de (xnxx).
+ᰔᩚ *#tiktokrandom • #ttrandom*
+> ✦ Descarga un video aleatorio de tiktok.
+ᰔᩚ *#npmdl • #npmdownloader*
+> ✦ Descarga paquetes de NPMJs.
+ᰔᩚ *#animelinks • #animedl*
+> ✦ Descarga Links disponibles de descargas.
 
-🍃  •/• \`Economia\` •/•
+• :･ﾟ⊹˚• \`『 Economia 』\` •˚⊹:･ﾟ•
 
 ☄︎ ᥴ᥆mᥲᥒძ᥆s ძᥱ ᥱᥴ᥆ᥒ᥆mі́ᥲ ᥡ r⍴g ⍴ᥲrᥲ gᥲᥒᥲr ძіᥒᥱr᥆ ᥡ ᥆𝗍r᥆s rᥱᥴᥙrs᥆s. 
 
@@ -144,7 +133,7 @@ let handler = async (m, { conn, usedPrefix, __dirname }) => {
 > ✦ Trabaja como prostituta y gana ${moneda}.
 ᰔᩚ *#cf • #suerte*
 > ✦ Apuesta tus ${moneda} a cara o cruz.
-ᰔᩚ *#crime • #crimen*
+ᰔᩚ *#crime • #crimen
 > ✦ Trabaja como ladrón para ganar ${moneda}.
 ᰔᩚ *#ruleta • #roulette • #rt*
 > ✦ Apuesta ${moneda} al color rojo o negro.
@@ -190,10 +179,8 @@ let handler = async (m, { conn, usedPrefix, __dirname }) => {
 > ✦ Ver tu inventario con todos tus ítems.
 ᰔᩚ *#mazmorra • #explorar*
 > ✦ Explorar mazmorras para ganar ${moneda}.
-✤ *#pescar • #fishing*
-> ➮ gana ${moneda} pescando.
 
-🍃  •/• \`Stickers\` •/•
+• :･ﾟ⊹˚• \`『 Stickers 』\` •˚⊹:･ﾟ•
 
 ☄︎ ᥴ᥆mᥲᥒძ᥆s ⍴ᥲrᥲ ᥴrᥱᥲᥴі᥆ᥒᥱs ძᥱ s𝗍іᥴkᥱrs ᥱ𝗍ᥴ. 
 
@@ -214,11 +201,15 @@ let handler = async (m, { conn, usedPrefix, __dirname }) => {
 ᰔᩚ *#emojimix*
 > ✦ Fuciona 2 emojis para crear un sticker.
 
-🍃  •/• \`Perfil\` •/•
+• :･ﾟ⊹˚• \`『 Perfil 』\` •˚⊹:･ﾟ•
 
 ☄︎ ᥴ᥆mᥲᥒძ᥆s ძᥱ ⍴ᥱr𝖿іᥣ ⍴ᥲrᥲ ᥎ᥱr, ᥴ᥆ᥒ𝖿іgᥙrᥲr ᥡ ᥴ᥆m⍴r᥆ᑲᥲr ᥱs𝗍ᥲძ᥆s ძᥱ 𝗍ᥙ ⍴ᥱr𝖿іᥣ. 
 
-ᰔᩚ *#profile • #perfil*
+ᰔᩚ *#reg • #verificar • #register*
+> ✦ Registra tu nombre y edad en el bot.
+ᰔᩚ *#unreg*
+> ✦ Elimina tu registro del bot.
+ᰔᩚ *#profile*
 > ✦ Muestra tu perfil de usuario.
 ᰔᩚ *#marry* [mension / etiquetar]
 > ✦ Propón matrimonio a otro usuario.
@@ -245,7 +236,7 @@ let handler = async (m, { conn, usedPrefix, __dirname }) => {
 ᰔᩚ *#confesiones • #confesar*
 > ✦ Confiesa tus sentimientos a alguien de manera anonima.
 
-🍃  •/• \`Grupos\` •/•
+• :･ﾟ⊹˚• \`『 Grupos 』\` •˚⊹:･ﾟ•
 
 ☄︎ ᥴ᥆mᥲᥒძ᥆s ძᥱ grᥙ⍴᥆s ⍴ᥲrᥲ ᥙᥒᥲ mᥱȷ᥆r gᥱs𝗍і᥆́ᥒ ძᥱ ᥱᥣᥣ᥆s. 
 
@@ -287,10 +278,10 @@ let handler = async (m, { conn, usedPrefix, __dirname }) => {
 > ✦ Quitar advertencias.
 ᰔᩚ *#advlist • #listadv*
 > ✦ Ver lista de usuarios advertidos.
-ᰔᩚ *#bot on*
-> ✦ activa el bot en un grupo.
-ᰔᩚ *#bot off*
-> ✦ Desactiva el bot en un grupo.
+ᰔᩚ *#banchat*
+> ✦ Banear el Bot en un chat o grupo.
+ᰔᩚ *#unbanchat*
+> ✦ Desbanear el Bot del chat o grupo.
 ᰔᩚ *#mute* [mension / etiquetar]
 > ✦ El bot elimina los mensajes del usuario.
 ᰔᩚ *#unmute* [mension / etiquetar]
@@ -310,7 +301,7 @@ let handler = async (m, { conn, usedPrefix, __dirname }) => {
 ᰔᩚ *#listnum • #kicknum*
 > ✦ Elimine a usuario por el prefijo de país.
 
-🍃  •/• \`Anime\` •/•
+• :･ﾟ⊹˚• \`『 Anime 』\` •˚⊹:･ﾟ•
 
 ☄︎ ᥴ᥆mᥲᥒძ᥆s ძᥱ rᥱᥲᥴᥴі᥆́ᥒ ᥲᥒіmᥱ. 
 
@@ -383,7 +374,7 @@ let handler = async (m, { conn, usedPrefix, __dirname }) => {
 ᰔᩚ *#think* + <mencion>
 > ✦ Pensar en algo
 
-🍃  •/• \`Nsfw\` •/•
+• :･ﾟ⊹˚• \`『 NSFW 』\` •˚⊹:･ﾟ•
 
 ☄︎ ᥴ᥆mᥲᥒძ᥆s ᥒs𝖿ᥕ (⍴ᥲrᥲ ᥲძᥙᥣ𝗍᥆s). 
 
@@ -430,7 +421,7 @@ let handler = async (m, { conn, usedPrefix, __dirname }) => {
 ᰔᩚ *#yuri • #tijeras* + <mencion>
 > ✦ Hacer tijeras.
 
-🍃  •/• \`Juegos\` •/•
+• :･ﾟ⊹˚• \`『 Juegos 』\` •˚⊹:･ﾟ•
 
 ☄︎ ᥴ᥆mᥲᥒძ᥆s ძᥱ ȷᥙᥱg᥆s ⍴ᥲrᥲ ȷᥙgᥲr ᥡ ძі᥎ᥱr𝗍іr𝗍ᥱ ᥴ᥆ᥒ 𝗍ᥙs ᥲmіg᥆s. 
 
@@ -442,6 +433,8 @@ let handler = async (m, { conn, usedPrefix, __dirname }) => {
 > ✦ La bot te cuenta un chiste.
 ᰔᩚ *#consejo* 
 > ✦ La bot te da un consejo. 
+ᰔᩚ *#doxeo • #doxear* + <mencion>
+> ✦ Simular un doxeo falso.
 ᰔᩚ *#facto*
 > ✦ La bot te lanza un facto. 
 ᰔᩚ *#formarpareja*
@@ -464,6 +457,10 @@ let handler = async (m, { conn, usedPrefix, __dirname }) => {
 > ✦ Calcular el iq de alguna persona. 
 ᰔᩚ *#meme*
 > ✦ La bot te envía un meme aleatorio. 
+ᰔᩚ *#morse*
+> ✦ Convierte un texto a codigo morse. 
+ᰔᩚ *#nombreninja*
+> ✦ Busca un nombre ninja aleatorio. 
 ᰔᩚ *#paja • #pajeame* 
 > ✦ La bot te hace una paja.
 ᰔᩚ *#personalidad* + <mencion>
@@ -481,7 +478,9 @@ let handler = async (m, { conn, usedPrefix, __dirname }) => {
 ᰔᩚ *#formartrio* + <mencion>
 > ✦ Forma un trio.
 ᰔᩚ *#ahorcado*
-> ✦ Diviertete con la bot jugando el juego del ahorcado.
+> ✦ Diviertete con la bot jugando el juego ahorcado.
+ᰔᩚ *#genio*
+> ✦ Comienza una pregunta con el genio.
 ᰔᩚ *#mates • #matematicas*
 > ✦ Responde las preguntas de matemáticas para ganar recompensas.
 ᰔᩚ *#ppt*
@@ -494,45 +493,39 @@ let handler = async (m, { conn, usedPrefix, __dirname }) => {
 > ✦ Crea una sala de juego. 
   `.trim();
 
-    await conn.sendMessage(m.chat, {
-      image: { url: randomImage },
-      caption: menu,
-      contextInfo: { 
-        mentionedJid: [m.sender], 
-        isForwarded: true, 
-        forwardedNewsletterMessageInfo: { 
-          newsletterJid: 'channel@example.com', 
-          newsletterName: 'Canal Oficial', 
-          serverMessageId: -1, 
-        }, 
-        forwardingScore: 999, 
-        externalAdReply: { 
-          title: botname, 
-          body: dev, 
-          thumbnailUrl: banner, 
-          sourceUrl: redes, 
-          mediaType: 1, 
-          renderLargerThumbnail: false 
-        }
-      }
-    })
+  await conn.sendMessage(m.chat, { 
+      text: txt,
+      contextInfo: {
+          mentionedJid: [m.sender, userId],
+          isForwarded: false,
+          forwardedNewsletterMessageInfo: {
+              newsletterJid: channelRD.id,
+              newsletterName: channelRD.name,
+              serverMessageId: -1,
+          },
+          forwardingScore: 999,
+          externalAdReply: {
+              title: botname,
+              body: textbot,
+              thumbnailUrl: banner,
+              mediaType: 1,
+              showAdAttribution: true,
+              renderLargerThumbnail: true,
+          },
+      },
+  }, { quoted: m });
 
-    await m.react(emojis)    
+};
 
-  } catch (e) {
-    await m.reply(`✘ Ocurrió un error al enviar el menú\n\n${e}`)
-    await m.react(error)
-  }
-}
+handler.help = ['menu'];
+handler.tags = ['main'];
+handler.command = ['menu', 'ayuda', 'help'];
 
-handler.help = ['menu']
-handler.tags = ['main']
-handler.command = ['menu', 'help', 'menú', 'allmenú', 'allmenu', 'menucompleto']
-export default handler
+export default handler;
 
 function clockString(ms) {
-  let h = Math.floor(ms / 3600000)
-  let m = Math.floor(ms / 60000) % 60
-  let s = Math.floor(ms / 1000) % 60
-  return [h, m, s].map(v => v.toString().padStart(2, '0')).join(':')
+    let seconds = Math.floor((ms / 1000) % 60);
+    let minutes = Math.floor((ms / (1000 * 60)) % 60);
+    let hours = Math.floor((ms / (1000 * 60 * 60)) % 24);
+    return `${hours}h ${minutes}m ${seconds}s`;
 }
