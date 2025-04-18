@@ -7,4 +7,4 @@
 
 ### **`✰ Créditos ✰`**
 <a
-href="https://github.com/The-King-Destroy"><img src="https://github.com/The-King-Destroy.png" width="140" height="140" alt="Destroy"/>/
+href="https://github.com/The-King-Destroy"><img src="https://github.com/The-King-Destroy.png" width="140" height="140" alt="Destroy"/>
